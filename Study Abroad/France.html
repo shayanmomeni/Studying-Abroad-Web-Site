@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>France-Study Abroad</title>
+
+	<meta charset="utf-8">
+
+	<script type="text/javascript" src="jQuery/jquery.min.js"></script>
+
+	<script src="jQuery/jquery-ui/jquery-ui.js"></script>
+
+	<link href="jQuery/jquery-ui/jquery-ui.css" rel="stylesheet">
+
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+	<style type="text/css">
+		body {
+
+			margin: 0;
+			padding: 0;
+			font-family: "Lato", Arial, Tahoma, sans-serif;
+			background-color: #FCFCFC;
+
+
+		}
+
+
+		.topBar {
+
+			background-color: #2C2C2C;
+			width: 100%;
+			height: 70px;
+			position: absolute;
+
+		}
+
+		.topBarMenu {
+
+			position: absolute;
+			left: 215px;
+			top: 15px;
+
+		}
+
+		.topBar ul {
+
+			list-style: none;
+			padding: 0px;
+			margin: 0px;
+
+		}
+
+		.topBar ul li {
+
+			float: left;
+			width: 160px;
+			height: 40px;
+			background-color: #2C2C2C;
+			opacity: .9;
+			line-height: 40px;
+			text-align: center;
+			font-size: 20px;
+
+		}
+
+		.topBar a {
+
+			color: #FFFFFF;
+			text-decoration: none;
+			display: block;
+		}
+
+		.topBar ul li a:hover {
+
+			background-color: black;
+
+		}
+
+		.topBar ul li ul li {
+
+			display: none;
+		}
+
+		.topBar ul li:hover ul li {
+
+			display: block;
+		}
+
+		.topBar ul li ul li ul {
+
+			float: left !important;
+			display: none;
+
+		}
+
+		.topBar ul li ul li:hover ul {
+
+			display: block;
+			margin-left: 159px;
+			margin-top: -41px;
+
+		}
+
+		#search {
+
+			width: 150px;
+			height: 18px;
+			background-color: black;
+			color: white;
+			position: absolute;
+			left: 1040px;
+			top: 16px;
+			padding: 6px;
+			font-size: 100%;
+			border: none;
+			border-radius: 6px;
+			border-top-right-radius: 0px;
+			border-bottom-right-radius: 0px;
+
+		}
+
+		.topBar img {
+
+			margin-top: 6px;
+		}
+
+		#searchImg {
+
+			position: absolute;
+			left: 1206px;
+			top: 14px;
+			width: 30px;
+			height: 30px;
+			border-radius: 6px;
+			border-top-left-radius: 0px;
+			border-bottom-left-radius: 0px;
+		}
+
+		#apply {
+
+			border: 2px solid white;
+			margin-left: 15px;
+			width: 120px;
+			height: 40px;
+			margin-top: -4px;
+
+		}
+
+		.languagePart {
+
+			float: left;
+			color: white;
+			margin-left: 1260px;
+			margin-top: 21px;
+			font-size: 88%;
+
+		}
+
+		.languagePart span {
+
+			float: left;
+			margin: 5px;
+		}
+
+		.languagePart a {
+
+			color: whte;
+
+		}
+
+		.languagePart a:hover {
+
+			color: gray;
+
+		}
+
+		#headerFrance {
+
+			width: 100%;
+			height: 150px;
+			background-color: rgb(230, 230, 230);
+
+		}
+
+		#headerFrance p {
+
+			color: #888888;
+			position: absolute;
+			font-size: 200%;
+			margin-top: 90px;
+			margin-left: 130px;
+			text-decoration: underline;
+
+		}
+
+		.franceImg {
+			width: 450px;
+			height: 250px;
+			margin-left: 90px;
+			margin-top: 35px;
+
+		}
+
+		.franceInf h1 {
+
+			color: #626262;
+			margin-left: 600px;
+			margin-top: -267px;
+		}
+
+		.franceInf p {
+
+			color: #626262;
+			margin-left: 600px;
+			margin-top: 20px;
+			line-height: 27px;
+			margin-right: 50px;
+
+		}
+
+		/* Tab menu*/
+
+		.ui-tabs-vertical {
+
+			width: 49em;
+			margin-left: 510px;
+			margin-top: 70px;
+			margin-bottom: 70px
+		}
+
+		.ui-tabs-vertical .ui-tabs-nav {
+
+			padding: .2em .1em .2em .2em;
+			float: left;
+			width: 22em;
+			border-right: none;
+			margin-top: 3px;
+			margin-left: -362px;
+			margin-top: -5px;
+
+
+		}
+
+		.ui-tabs-vertical .ui-tabs-nav li {
+
+			clear: left;
+			width: 100%;
+			border-bottom-width: 0 !important;
+			border-right-width: 0 !important;
+			border-top-width: 0 !important;
+			border-left-width: 0 !important;
+			margin: 0;
+
+
+
+		}
+
+		.ui-tabs-vertical .ui-tabs-nav li a {
+
+			display: block;
+			color: #757575;
+			width: 20em;
+
+
+		}
+
+
+
+		.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active {
+
+			padding-bottom: 0;
+			padding-right: .1em;
+			border-right-width: 1px;
+			background-color: white;
+
+
+
+		}
+
+		.ui-tabs-vertical .ui-tabs-panel {
+
+			padding: 1em;
+			float: right;
+			width: 40em;
+
+
+
+		}
+
+		.tab-1Head {
+
+			font-size: 100%;
+			color: #626262;
+			margin-left: -90px;
+			margin-top: -8px;
+
+		}
+
+		.tab-1Body {
+
+			line-height: 28px;
+			margin-left: -80px;
+			margin-top: -5px;
+
+
+		}
+
+
+
+		.tab-2Body {
+
+			line-height: 28px;
+			margin-left: -80px;
+			margin-top: -3px;
+
+		}
+
+		.tab-2Head {
+
+			font-weight: bold;
+			margin-left: -90px;
+			color: #626262;
+			margin-top: -5px;
+		}
+
+		.tab-4Body {
+
+			line-height: 28px;
+			margin-left: -80px;
+			margin-top: -3px;
+
+		}
+
+		.tab-4Head {
+
+			font-weight: bold;
+			margin-left: -90px;
+			color: #626262;
+			margin-top: -5px;
+		}
+
+
+		/* Validation Form*/
+
+		input {
+
+			height: 32px;
+			padding: 5px 5px 10px 17px;
+			font-size: 20px;
+			border-radius: 5px;
+			border: 1px solid gray;
+			width: 380px;
+			margin-top: 4px;
+
+
+		}
+
+		label {
+			position: relative;
+			top: 15px;
+			width: 300px;
+			float: left;
+
+
+		}
+
+		#DateBirth {
+
+			width: 265px !important;
+			font-size: 17px;
+		}
+
+		#emaildiv {
+
+			width: 750px;
+			margin: 0 auto;
+			background-color: #EDEFF2;
+			padding: 10px 20px 20px 20px;
+			margin-top: -20px;
+			margin-left: -131px;
+
+
+
+
+
+		}
+
+		.form-element {
+
+			margin-bottom: 10px;
+		}
+
+		.LevelOfStudy {
+
+			width: 290px;
+			height: 50px;
+			font-size: 17px;
+			margin-top: 7px;
+			margin-bottom: 7px;
+
+		}
+
+		#submitButton {
+
+			width: 130px;
+			margin-left: -10px;
+			background-color: #D3D3D3;
+			padding: 1px 2px 4px 2px;
+		}
+
+		#submitButton:hover {
+
+			color: white;
+			background-color: black;
+		}
+
+
+		#errorMessage {
+
+			color: red;
+			font-size: 100% !important;
+
+
+		}
+
+
+
+		#succussMessage {
+
+			color: green;
+			font-size: 110% !important;
+			display: none;
+			font-weight: bold;
+			margin-top: 20px;
+
+		}
+
+		#textArea {
+
+
+			width: 673px;
+			height: 200px;
+			border: none;
+			font-size: 15px;
+			line-height: 20px;
+
+		}
+
+
+
+		/* Footer */
+
+		/* Footer */
+
+		.footer {
+
+			background-color: #545454;
+			width: 100%;
+			height: 500px;
+
+
+		}
+
+		#footerFirstPartHead {
+
+			color: #DDDDDD;
+			position: absolute;
+			font-size: 120%;
+			margin-left: 120px;
+			margin-top: 40px;
+		}
+
+		#footerFirstPartInf1 {
+
+			color: #CCCCCC;
+			position: absolute;
+			font-size: 90%;
+			margin-left: 120px;
+			margin-top: 80px;
+			width: 400px;
+			line-height: 24px;
+			margin-bottom: 15px;
+		}
+
+		#footerFirstPartInf2 {
+
+			color: #CCCCCC;
+			position: absolute;
+			font-size: 90%;
+			margin-left: 120px;
+			margin-top: 220px;
+			width: 400px;
+			line-height: 24px;
+			margin-bottom: 15px;
+		}
+
+		/*  footer /second line*/
+
+		#footerSecondPartHead {
+
+			color: #DDDDDD;
+			position: absolute;
+			font-size: 120%;
+			margin-left: 560px;
+			margin-top: 40px;
+
+		}
+
+		#tick1 {
+
+			position: absolute;
+			font-size: 20px;
+			margin-left: 580px;
+			margin-top: 80px;
+		}
+
+		#footerSecondInf1 {
+
+			color: #CCCCCC;
+			position: absolute;
+			font-size: 90%;
+			margin-left: 610px;
+			margin-top: 78px;
+			width: 400px;
+			line-height: 24px;
+
+		}
+
+		#footerSmallLine1 {
+
+			border-top: 1px solid gray;
+			position: absolute;
+			margin-top: 110px;
+			margin-left: 560px;
+			width: 80px;
+		}
+
+		/* second line of seconf part of footer*/
+
+		#tick2 {
+
+			position: absolute;
+			font-size: 20px;
+			margin-left: 580px;
+			margin-top: 130px;
+		}
+
+		#footerSecondInf2 {
+
+			color: #CCCCCC;
+			position: absolute;
+			font-size: 90%;
+			margin-left: 610px;
+			margin-top: 128px;
+			width: 400px;
+			line-height: 24px;
+
+		}
+
+		#footerSmallLine2 {
+
+			border-top: 1px solid gray;
+			position: absolute;
+			margin-top: 160px;
+			margin-left: 560px;
+			width: 80px;
+		}
+
+		/* third line of seconf part of footer*/
+
+		#tick3 {
+
+			position: absolute;
+			font-size: 20px;
+			margin-left: 580px;
+			margin-top: 180px;
+		}
+
+		#footerSecondInf3 {
+
+			color: #CCCCCC;
+			position: absolute;
+			font-size: 90%;
+			margin-left: 610px;
+			margin-top: 178px;
+			width: 400px;
+			line-height: 24px;
+
+		}
+
+		#footerSmallLine3 {
+
+			border-top: 1px solid gray;
+			position: absolute;
+			margin-top: 210px;
+			margin-left: 560px;
+			width: 80px;
+		}
+
+		/* fourth line of seconf part of footer*/
+
+		#tick4 {
+
+			position: absolute;
+			font-size: 20px;
+			margin-left: 580px;
+			margin-top: 230px;
+		}
+
+		#footerSecondInf4 {
+
+			color: #CCCCCC;
+			position: absolute;
+			font-size: 90%;
+			margin-left: 610px;
+			margin-top: 228px;
+			width: 400px;
+			line-height: 24px;
+
+		}
+
+		#footerSmallLine4 {
+
+			border-top: 1px solid gray;
+			position: absolute;
+			margin-top: 285px;
+			margin-left: 560px;
+			width: 80px;
+		}
+
+		/* fourth line of seconf part of footer*/
+
+		#tick5 {
+
+			position: absolute;
+			font-size: 20px;
+			margin-left: 580px;
+			margin-top: 302px;
+		}
+
+		#footerSecondInf5 {
+
+			color: #CCCCCC;
+			position: absolute;
+			font-size: 90%;
+			margin-left: 610px;
+			margin-top: 300px;
+			width: 400px;
+			line-height: 24px;
+
+		}
+
+
+		/* third part of footer / contact part of footer */
+
+		#footerThirdPartHead {
+
+			color: #DDDDDD;
+			position: absolute;
+			font-size: 120%;
+			margin-left: 1020px;
+			margin-top: 40px;
+		}
+
+		#footerThirdPartPhone {
+
+			color: #CCCCCC;
+			position: absolute;
+			font-size: 90%;
+			margin-left: 1020px;
+			margin-top: 80px;
+			width: 400px;
+
+		}
+
+		#footerThirdPartEmail {
+
+			color: #CCCCCC;
+			position: absolute;
+			font-size: 90%;
+			margin-left: 1020px;
+			margin-top: 110px;
+			width: 400px;
+
+		}
+
+		.footer hr {
+
+			position: absolute;
+			margin-top: 430px;
+			width: 100%;
+
+		}
+
+		#copyright {
+
+			position: absolute;
+			color: #CCCCCC;
+			margin-top: 460px;
+			margin-left: 39%;
+		}
+
+		/*social media*/
+
+
+		#socialMedia ul {
+
+			display: flex;
+			position: absolute;
+			transform: translate(-50%, -50%);
+			margin-left: 1135px;
+			margin-top: 325px;
+
+		}
+
+		#socialMedia ul li {
+
+			list-style: none;
+		}
+
+		#socialMedia ul li a {
+
+			width: 60px;
+			height: 60px;
+			background-color: #fff;
+			text-align: center;
+			line-height: 60px;
+			font-size: 40px;
+			margin-left: 13px;
+			display: block;
+			border-radius: 50%;
+			position: relative;
+			overflow: hidden;
+			border: 3px solid #fff;
+
+
+		}
+
+		#socialMedia ul li a .fa {
+
+			position: relative;
+			color: #262626;
+			transition: .7s;
+		}
+
+		#socialMedia ul li a:hover .fa {
+
+			transform: rotateY(360deg);
+			color: white;
+		}
+
+
+		#socialMedia ul li a:before {
+
+			content: '';
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: #f00;
+			transition: .5s;
+
+		}
+
+		#socialMedia ul li a:hover:before {
+
+			top: 0;
+
+
+		}
+
+		#socialMedia ul li:nth-child(1) a:before {
+
+			background-color: #3b5999;
+		}
+
+		#socialMedia ul li:nth-child(2) a:before {
+
+			background-color: #e4405f;
+		}
+
+		#socialMedia ul li:nth-child(3) a:before {
+
+			background-color: #00AFF0;
+		}
+
+		#socialMedia ul li:nth-child(4) a:before {
+
+			background-color: #25D366;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<div class="topBar">
+
+		<ul class="topBarMenu">
+
+			<li> <a href="StudyAbroad.html"> Home </a></li>
+
+			<li> <a> Study Abroad </a>
+
+				<ul>
+					<li> <a href="Canada.html"> Canada </a></li>
+					<li> <a href="Usa.html"> USA </a></li>
+					<li> <a> Europe </a>
+
+						<ul>
+
+							<li><a href="Hungary.html">Hungary </a></li>
+							<li><a href="Italy.html">Italy </a></li>
+							<li><a href="Germany.html">Germany </a></li>
+							<li><a href="France.html">France </a></li>
+
+						</ul>
+
+					</li>
+					<li> <a href="Malaysia.html"> Malaysia </a></li>
+				</ul>
+			</li>
+
+			<li> <a href="Ielts.html">IELTS/PTE </a></li>
+
+			<!-- <li> <a href="" id="event">Events </a></li> -->
+
+			<li> <a href="ContactUs.html">Contact Us </a></li>
+
+			<LI id="apply"> <a href="Apply.html">Apply Now </a></LI>
+
+		</ul>
+
+
+		<input id="search" type="text" placeholder="Search...">
+
+		<a href=""><img id="searchImg" src="pictures/search5.PNG"></a>
+
+		<div class="languagePart">
+			<span><a href="">English</a></span>
+
+			<span>|</span>
+
+			<span><a href="">Japanese</a></span>
+		</div>
+
+		<!-- <img src="pictures/logooooooo.jpg"> -->
+
+
+	</div>
+
+	<div id="headerFrance">
+
+		<p>France</p>
+
+	</div>
+
+	<!-- Main Part of canada -->
+
+	<div class="franceInf">
+
+		<img class="franceImg" src="pictures/francePage.jpg">
+
+		<h1>Study in Paris</h1>
+
+		<p>Studying in Paris is a great opportunity for international students looking for a world class education and the opportunity to be immersed in one of the most important cultural capitals in the world. Our University in Paris centrally located in
+			one of the liveliest areas of the city, close to Montparnasse and the student district known as “Quartier Latin”. Located in the capital of France, Paris boasts the sixth largest world economy and is a bustling economic and commercial center. The
+			city offers over 150 museums including the Louvre, and exceptional sites, such as the Champs-Elysees and the Eiffel Tower. As an independent, international and American University in Paris, Schiller offers students a multicultural environment
+			with faculty that encourages diversity, leadership, and global understanding.
+		</p>
+
+	</div>
+
+
+
+	<!-- Tab Menue  -->
+
+
+	<div id="tabs">
+
+		<ul>
+
+			<li><a href="#tabs-1">Why study in Paris?</a></li>
+
+			<li><a href="#tabs-2">Cost of studying in Paris</a></li>
+
+			<li><a href="#tabs-4">Visa requirements for France</a></li>
+
+			<li><a href="#tabs-5">Apply Now</a></li>
+
+		</ul>
+
+		<div id="tabs-1">
+
+			<p class="tab-1Head">Has France always been your dream study destination?</p>
+
+			<p class="tab-1Body">
+
+				<b>Well,</b> you have come to the right place. France especially Paris is One of the top destinations for international students. The universities in France rank among the best in the world. The cost of living in France is relatively cheaper
+				than the equally popular countries. <br> <br>
+
+				<b>At the beginning</b> of every term, each campus conducts an orientation program especially designed to assist incoming students in adjusting to a new country. Lectures are planned to introduce students not only to some of the customs and
+				cultural heritage of the host country, but to the practical aspects of living in that country as well. <br> <br>
+
+				<b>Students receive</b> information about public transportation schedules and fares, banking procedures and hours, student discounts, inexpensive restaurants, and local customs. Every effort is made to ease the transition to life in a new
+				country and to answer all questions students may have about the school and the host country. We also help you to deal with things like visa and residence permits, driver licenses, etc. <br>
+				<br>
+
+				<b>All our programs</b> are taught in English to make sure our students gain a major competitive advantage, by mastering the language of business “par excellence”, by the time they finish their studies. Non-native speakers are required to
+				provide Evidence of English Proficiency; however, we do offer English support classes for those who may need them. <br> <br>
+
+				<b>We offer</b> our students a multicultural faculty and environment that encourage diversity, leadership and global understanding. In addition, students from over 100 nations, making all our Universities as international and dynamic as they
+				could be. Studying in such a global environment is a unique experience for our students, being inspiring and stimulating at the same time. <br> <br>
+
+				<b>Students</b> will have the opportunity to join an international network of over 20,000 alumni from over 130 countries, to enhance their job search and career development.
+			</p>
+		</div>
+
+		<div id="tabs-2">
+
+			<p class="tab-2Head">What is Paris life cost as students?</p>
+
+
+			<p class="tab-2Body">
+
+				You just got an opportunity do make a mobility exchange in Paris!! Keep calm and take it easy, we've listed you the main cost that you will have by living in this wonderful and charming city of love call Paris. Before you start to read this, we
+				want to let you know that all the information here is given as indicative resource. Your own life cost experience might be different! <br> <br>
+
+
+				<b>Rent - Accommodation:</b> <br> <br>
+
+
+				Housing will be your main expenses. Students' flat between 9m² to 20m² will cost you approximately between 450€ to 700€ per month. To find cheap housing in Paris we advise you to have a look on our accommodation section. You can lower the rent
+				by living in Hall of Residence, living in a double room or sharing a flat with flat mates. <br> <br>
+
+
+				To keep it simple someone who live in Paris will pay around 70€ per month. <br> <br>
+
+			</p>
+
+		</div>
+
+
+		<div id="tabs-4">
+
+			<p class="tab-4Head">Required application documents for France study visa</p>
+
+			<p class="tab-4Body">
+
+				1. Proof of payment of the visa fee (99 EUR). <br>
+
+				2. Visa application form <br>
+
+				3. Two passport type photos <br>
+
+				4. Valid passport and copies of your previous visas <br>
+
+				5. Official enrollment or acceptance letter from the university <br>
+
+				6. IELTS result (your counsellor can book your place in an English test) <br>
+
+				7. Academic and work experience documents <br>
+
+				8. Statement of purpose <br>
+
+				9. Proof of financial means (around 615 EUR per month) to cover all your expenses during your study period <br>
+
+				10. Airline ticket/reservation showing date of departure <br>
+
+				11.Medical insurance that might cost between 311 and 714 EUR/year <br>
+
+				12.Documents stating the accommodation arrangement during your studies <br>
+
+				13. Proof of civil status (if applicable) <br>
+
+			</p>
+		</div>
+
+
+
+		<div id="tabs-5">
+
+			<div id="emaildiv">
+
+				<form action="https://formspree.io/shayan_momeni@yahoo.com" method="POST">
+
+					<h2>Assessment Form</h2>
+
+					<p class="headerValidation">All fields are required</p>
+
+					<div class="form-element">
+
+						<label for="FirstName">First Name</label>
+						<input type="name" name="FirstName" id="FirstName" placeholder="eg.Shayan">
+
+					</div>
+
+					<div class="form-element">
+
+						<label for="LastName">Last Name</label>
+						<input type="name" name="LastName" id="LastName" placeholder="eg.Momeni">
+
+					</div>
+
+					<div class="form-element">
+
+						<label for="DateBirth">Date of Birth</label>
+						<input type="date" name="Date of Birth" id="DateBirth" placeholder="eg.YY/DD/MM">
+
+					</div>
+
+
+
+					<div class="form-element">
+
+						<label for="Nationality">Nationality</label>
+
+						<select class="LevelOfStudy" name="nationality">
+
+							<option value="">-- select one --</option>
+							<option value="afghan">Afghan</option>
+							<option value="albanian">Albanian</option>
+							<option value="algerian">Algerian</option>
+							<option value="american">American</option>
+							<option value="andorran">Andorran</option>
+							<option value="angolan">Angolan</option>
+							<option value="antiguans">Antiguans</option>
+							<option value="argentinean">Argentinean</option>
+							<option value="armenian">Armenian</option>
+							<option value="australian">Australian</option>
+							<option value="austrian">Austrian</option>
+							<option value="azerbaijani">Azerbaijani</option>
+							<option value="bahamian">Bahamian</option>
+							<option value="bahraini">Bahraini</option>
+							<option value="bangladeshi">Bangladeshi</option>
+							<option value="barbadian">Barbadian</option>
+							<option value="barbudans">Barbudans</option>
+							<option value="batswana">Batswana</option>
+							<option value="belarusian">Belarusian</option>
+							<option value="belgian">Belgian</option>
+							<option value="belizean">Belizean</option>
+							<option value="beninese">Beninese</option>
+							<option value="bhutanese">Bhutanese</option>
+							<option value="bolivian">Bolivian</option>
+							<option value="bosnian">Bosnian</option>
+							<option value="brazilian">Brazilian</option>
+							<option value="british">British</option>
+							<option value="bruneian">Bruneian</option>
+							<option value="bulgarian">Bulgarian</option>
+							<option value="burkinabe">Burkinabe</option>
+							<option value="burmese">Burmese</option>
+							<option value="burundian">Burundian</option>
+							<option value="cambodian">Cambodian</option>
+							<option value="cameroonian">Cameroonian</option>
+							<option value="canadian">Canadian</option>
+							<option value="cape verdean">Cape Verdean</option>
+							<option value="central african">Central African</option>
+							<option value="chadian">Chadian</option>
+							<option value="chilean">Chilean</option>
+							<option value="chinese">Chinese</option>
+							<option value="colombian">Colombian</option>
+							<option value="comoran">Comoran</option>
+							<option value="congolese">Congolese</option>
+							<option value="costa rican">Costa Rican</option>
+							<option value="croatian">Croatian</option>
+							<option value="cuban">Cuban</option>
+							<option value="cypriot">Cypriot</option>
+							<option value="czech">Czech</option>
+							<option value="danish">Danish</option>
+							<option value="djibouti">Djibouti</option>
+							<option value="dominican">Dominican</option>
+							<option value="dutch">Dutch</option>
+							<option value="east timorese">East Timorese</option>
+							<option value="ecuadorean">Ecuadorean</option>
+							<option value="egyptian">Egyptian</option>
+							<option value="emirian">Emirian</option>
+							<option value="equatorial guinean">Equatorial Guinean</option>
+							<option value="eritrean">Eritrean</option>
+							<option value="estonian">Estonian</option>
+							<option value="ethiopian">Ethiopian</option>
+							<option value="fijian">Fijian</option>
+							<option value="filipino">Filipino</option>
+							<option value="finnish">Finnish</option>
+							<option value="french">French</option>
+							<option value="gabonese">Gabonese</option>
+							<option value="gambian">Gambian</option>
+							<option value="georgian">Georgian</option>
+							<option value="german">German</option>
+							<option value="ghanaian">Ghanaian</option>
+							<option value="greek">Greek</option>
+							<option value="grenadian">Grenadian</option>
+							<option value="guatemalan">Guatemalan</option>
+							<option value="guinea-bissauan">Guinea-Bissauan</option>
+							<option value="guinean">Guinean</option>
+							<option value="guyanese">Guyanese</option>
+							<option value="haitian">Haitian</option>
+							<option value="herzegovinian">Herzegovinian</option>
+							<option value="honduran">Honduran</option>
+							<option value="hungarian">Hungarian</option>
+							<option value="icelander">Icelander</option>
+							<option value="indian">Indian</option>
+							<option value="indonesian">Indonesian</option>
+							<option value="iranian">Iranian</option>
+							<option value="iraqi">Iraqi</option>
+							<option value="irish">Irish</option>
+							<option value="israeli">Israeli</option>
+							<option value="italian">Italian</option>
+							<option value="ivorian">Ivorian</option>
+							<option value="jamaican">Jamaican</option>
+							<option value="japanese">Japanese</option>
+							<option value="jordanian">Jordanian</option>
+							<option value="kazakhstani">Kazakhstani</option>
+							<option value="kenyan">Kenyan</option>
+							<option value="kittian and nevisian">Kittian and Nevisian</option>
+							<option value="kuwaiti">Kuwaiti</option>
+							<option value="kyrgyz">Kyrgyz</option>
+							<option value="laotian">Laotian</option>
+							<option value="latvian">Latvian</option>
+							<option value="lebanese">Lebanese</option>
+							<option value="liberian">Liberian</option>
+							<option value="libyan">Libyan</option>
+							<option value="liechtensteiner">Liechtensteiner</option>
+							<option value="lithuanian">Lithuanian</option>
+							<option value="luxembourger">Luxembourger</option>
+							<option value="macedonian">Macedonian</option>
+							<option value="malagasy">Malagasy</option>
+							<option value="malawian">Malawian</option>
+							<option value="malaysian">Malaysian</option>
+							<option value="maldivan">Maldivan</option>
+							<option value="malian">Malian</option>
+							<option value="maltese">Maltese</option>
+							<option value="marshallese">Marshallese</option>
+							<option value="mauritanian">Mauritanian</option>
+							<option value="mauritian">Mauritian</option>
+							<option value="mexican">Mexican</option>
+							<option value="micronesian">Micronesian</option>
+							<option value="moldovan">Moldovan</option>
+							<option value="monacan">Monacan</option>
+							<option value="mongolian">Mongolian</option>
+							<option value="moroccan">Moroccan</option>
+							<option value="mosotho">Mosotho</option>
+							<option value="motswana">Motswana</option>
+							<option value="mozambican">Mozambican</option>
+							<option value="namibian">Namibian</option>
+							<option value="nauruan">Nauruan</option>
+							<option value="nepalese">Nepalese</option>
+							<option value="new zealander">New Zealander</option>
+							<option value="ni-vanuatu">Ni-Vanuatu</option>
+							<option value="nicaraguan">Nicaraguan</option>
+							<option value="nigerien">Nigerien</option>
+							<option value="north korean">North Korean</option>
+							<option value="northern irish">Northern Irish</option>
+							<option value="norwegian">Norwegian</option>
+							<option value="omani">Omani</option>
+							<option value="pakistani">Pakistani</option>
+							<option value="palauan">Palauan</option>
+							<option value="panamanian">Panamanian</option>
+							<option value="papua new guinean">Papua New Guinean</option>
+							<option value="paraguayan">Paraguayan</option>
+							<option value="peruvian">Peruvian</option>
+							<option value="polish">Polish</option>
+							<option value="portuguese">Portuguese</option>
+							<option value="qatari">Qatari</option>
+							<option value="romanian">Romanian</option>
+							<option value="russian">Russian</option>
+							<option value="rwandan">Rwandan</option>
+							<option value="saint lucian">Saint Lucian</option>
+							<option value="salvadoran">Salvadoran</option>
+							<option value="samoan">Samoan</option>
+							<option value="san marinese">San Marinese</option>
+							<option value="sao tomean">Sao Tomean</option>
+							<option value="saudi">Saudi</option>
+							<option value="scottish">Scottish</option>
+							<option value="senegalese">Senegalese</option>
+							<option value="serbian">Serbian</option>
+							<option value="seychellois">Seychellois</option>
+							<option value="sierra leonean">Sierra Leonean</option>
+							<option value="singaporean">Singaporean</option>
+							<option value="slovakian">Slovakian</option>
+							<option value="slovenian">Slovenian</option>
+							<option value="solomon islander">Solomon Islander</option>
+							<option value="somali">Somali</option>
+							<option value="south african">South African</option>
+							<option value="south korean">South Korean</option>
+							<option value="spanish">Spanish</option>
+							<option value="sri lankan">Sri Lankan</option>
+							<option value="sudanese">Sudanese</option>
+							<option value="surinamer">Surinamer</option>
+							<option value="swazi">Swazi</option>
+							<option value="swedish">Swedish</option>
+							<option value="swiss">Swiss</option>
+							<option value="syrian">Syrian</option>
+							<option value="taiwanese">Taiwanese</option>
+							<option value="tajik">Tajik</option>
+							<option value="tanzanian">Tanzanian</option>
+							<option value="thai">Thai</option>
+							<option value="togolese">Togolese</option>
+							<option value="tongan">Tongan</option>
+							<option value="trinidadian or tobagonian">Trinidadian or Tobagonian</option>
+							<option value="tunisian">Tunisian</option>
+							<option value="turkish">Turkish</option>
+							<option value="tuvaluan">Tuvaluan</option>
+							<option value="ugandan">Ugandan</option>
+							<option value="ukrainian">Ukrainian</option>
+							<option value="uruguayan">Uruguayan</option>
+							<option value="uzbekistani">Uzbekistani</option>
+							<option value="venezuelan">Venezuelan</option>
+							<option value="vietnamese">Vietnamese</option>
+							<option value="welsh">Welsh</option>
+							<option value="yemenite">Yemenite</option>
+							<option value="zambian">Zambian</option>
+							<option value="zimbabwean">Zimbabwean</option>
+
+						</select>
+
+					</div>
+
+					<div class="form-element">
+
+						<label for="LevelOfStudy">Level of Study you are interested in to Apply</label>
+
+						<select class="LevelOfStudy">
+
+							<option value="">-- select one --</option>
+							<option value="High School">High School Graduate Or Equivalent</option>
+							<option value="Diploma Degree">Diploma Degree</option>
+							<option value="Bachelor's Degree">Bachelor's Degree</option>
+							<option value="Master's Degree">Master's Degree</option>
+							<option value="PHD/MBA">PHD/MBA</option>
+							<option value="English Language Course">English Language Course</option>
+
+						</select>
+
+					</div>
+
+					<div class="form-element">
+
+						<label for="Planning">I am Planning to study in...</label>
+
+						<select class="LevelOfStudy">
+
+							<option value="">-- select one --</option>
+							<option value="USA">USA</option>
+							<option value="Canada">Canada</option>
+							<option value="Italy">Italy</option>
+							<option value="Swizerland">Swizerland</option>
+							<option value="Hungary">Hungary</option>
+							<option value="Sweden">Sweden</option>
+							<option value="France">France</option>
+							<option value="Malaysia">Malaysia</option>
+							<option value="Spain">Spain</option>
+							<option value="IELTS/PTE">IELTS/PTE</option>
+
+						</select>
+
+					</div>
+
+
+					<div class="form-element">
+
+						<label for="Telephone">Telephone</label>
+						<input type="text" name="Telephone" id="Telephone" placeholder="eg.0123456789">
+
+					</div>
+
+					<div class="form-element">
+
+						<label for="email">Email</label>
+						<input type="text" name="email" id="email" placeholder="eg.Shayan_momeni@yahoo.com">
+
+					</div>
+
+					<div>
+						<br>
+						<p>Tell us More about Yourself</p>
+
+						<textarea id="textArea" name="Message"></textarea>
+
+						<br>
+						<br>
+
+					</div>
+
+					<div class="form-element">
+
+						<input type="submit" id="submitButton" value="Sign up">
+
+
+					</div>
+
+
+
+					<div>
+						<div id="errorMessage"> </div>
+						<div id="succussMessage">It is done successfully !</div>
+
+					</div>
+
+
+			</div>
+
+			</form>
+
+		</div>
+
+
+
+
+
+
+		<script type="text/javascript">
+			function isEmail(email) {
+
+				var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+				return regex.test(email);
+
+			}
+
+			$("#submitButton").click(function() {
+
+				var errorMessage = "";
+
+				var fieldsMissing = "";
+
+
+				if ($("#FirstName").val() == "") {
+
+					fieldsMissing += "<p >First Name !";
+				}
+
+				if ($("#LastName").val() == "") {
+
+					fieldsMissing += "<p>Last Name !";
+				}
+
+				if ($("#DateBirth").val() == "") {
+
+					fieldsMissing += "<p>Date of Birth !";
+				}
+
+				if ($("#Nationality").val() == "") {
+
+					fieldsMissing += "<p>Nationality !";
+				}
+
+
+
+				if ($("#email").val() == "") {
+
+					fieldsMissing += "<p>Email !";
+				}
+
+				if ($("#Telephone").val() == "") {
+
+					fieldsMissing += "<p>Telephone !";
+				}
+
+
+
+
+				if (fieldsMissing != "") {
+
+					errorMessage += "<p> The following field(s) are missing : " + fieldsMissing;
+				}
+
+
+
+
+				if (isEmail($("#email").val()) == false) {
+
+					errorMessage += "<p> Your Email Address is not valid ! </p>";
+
+				}
+
+				if ($.isNumeric($("#Telephone").val()) == false) {
+
+					errorMessage += "<p> Your Telephone Number is not correct ! </p> ";
+
+				}
+
+
+
+				if (errorMessage != "") {
+
+					$("#errorMessage").html(errorMessage);
+
+				} else {
+
+					$("#succussMessage").show();
+					$("#errorMessage").hide();
+				}
+			});
+		</script>
+
+
+
+	</div>
+
+	</div>
+
+	<script type="text/javascript">
+		$(function() {
+
+			$("#tabs").tabs().addClass("ui-tabs-vertical ui-helper-clearfix");
+			$("#tabs li").removeClass("ui-corner-top").addClass("ui-corner-left");
+		});
+	</script>
+
+	<script type="text/javascript">
+		$("#event").click(function() {
+
+			alert("There is not any Event available right now !");
+
+		});
+	</script>
+
+
+	<!-- alert for search part -->
+
+	</script>
+
+
+	<script type="text/javascript">
+		$("#search").click(function() {
+
+			alert("Sorry,this engine will be active soon !");
+
+		});
+
+		$("#searchImg").click(function() {
+
+			alert("Sorry,this engine will be active soon !");
+
+		});
+	</script>
+
+
+	<!-- Footer -->
+	<!-- Footer -->
+
+	<div class="footer">
+
+		<!-- First part of footer -->
+
+		<p id="footerFirstPartHead">How We Arise?</p>
+
+		<p id="footerFirstPartInf1">We started back in October 2010 with the goal to help other students to enroll in Malaysian universities. In early 2014 we started offering students the Universities in USA and Europe especially Germany and We could
+			successfully place many international students from various nationalities.</p>
+
+		<p id="footerFirstPartInf2">Currently study vesta ( Registered as Vesta Consulting Sdn. Bhd.) features various private schools, colleges and universities, public universities, polytechnics and professional bodies in Malaysia, USA, Canada , UK,
+			Australia and Europe.​ We are diverse, welcoming, accepting and passionate about being the best we can be. Join us to make your Academic experience unforgettable.</p>
+
+		<!--  Second Part of footer  -->
+
+		<p id="footerSecondPartHead">Our Sevices</p>
+
+		<p id="tick1">&#10004;</p>
+
+		<p id="footerSecondInf1">Free Visa consultation and Documentation assistance</p>
+
+		<p id="footerSmallLine1"></p>
+
+		<!-- Second Part of footer / second line -->
+
+		<p id="tick2">&#10004;</p>
+
+		<p id="footerSecondInf2">Free Scholarship information and application services</p>
+
+		<p id="footerSmallLine2"></p>
+
+		<!-- Second Part of footer / third line -->
+
+		<p id="tick3">&#10004;</p>
+
+		<p id="footerSecondInf3">Free Embassy Interview Preparation</p>
+
+		<p id="footerSmallLine3"></p>
+
+		<!-- Second Part OF footer / fourth line  -->
+
+		<p id="tick4">&#10004;</p>
+
+		<p id="footerSecondInf4">Free Professional advice including visa regulations, accommodation arrangements, travel plans</p>
+
+		<p id="footerSmallLine4"></p>
+
+		<!-- Second Part OF footer / fifth line  -->
+
+		<p id="tick5">&#10004;</p>
+
+		<p id="footerSecondInf5">Free IELTS/ TOEFL/ PTE Preparation Consultation with professional Trainers</p>
+
+
+
+
+		<!-- Third Part of footer / contact Part -->
+
+		<p id="footerThirdPartHead">Contact us</p>
+
+		<p id="footerThirdPartPhone">Phone : +601160990725</p>
+
+		<p id="footerThirdPartEmail">Email : Shayan_momeni@yahoo.com</p>
+
+
+
+		<!-- Last Part Main Page  -->
+
+		<hr>
+
+		<p id="copyright">&#169; Shayan Momeni &#124; All Rights Reserved</p>
+
+		<!-- social Media part -->
+
+
+		<div id="socialMedia">
+
+			<ul>
+				<li><a href=""><i class="fa fa-facebook"></i></a></li>
+				<li><a href=""><i class="fa fa-instagram"></i></a></li>
+				<li><a href=""><i class="fa fa-skype"></i></a></li>
+				<li><a href=""><i class="fa fa-whatsapp"></i></a></li>
+
+			</ul>
+		</div>
+
+
+	</div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,1851 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>Studying Abroad</title>
+
+	<meta charset="utf-8">
+
+	<script type="text/javascript" src="jQuery/jquery.min.js"></script>
+
+	<script src="jQuery/jquery-ui/jquery-ui.js"></script>
+
+	<link href="jQuery/jquery-ui/jquery-ui.css" rel="stylesheet">
+
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+
+	<style type="text/css">
+
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: "Lato", Arial, Tahoma, sans-serif;
+			background-color: white;
+
+
+		}
+
+
+		/* Top bar // menu */
+
+		.topBar {
+
+			background-color: #2C2C2C;
+			width: 100%;
+			height: 70px;
+			position: fixed;
+			z-index: 1;
+			margin-top: -70px;
+
+		}
+
+		.topBarMenu {
+
+			position: absolute;
+			left: 215px;
+			top: 15px;
+		}
+
+		.topBar ul {
+
+			list-style: none;
+			padding: 0px;
+			margin: 0px;
+
+		}
+
+		.topBar ul li {
+
+			float: left;
+			width: 160px;
+			height: 40px;
+			background-color: #2C2C2C;
+			opacity: .9;
+			line-height: 40px;
+			text-align: center;
+			font-size: 20px;
+
+		}
+
+		.topBar a {
+
+			color: #FFFFFF;
+			text-decoration: none;
+			display: block;
+		}
+
+		.topBar ul li a:hover {
+
+			background-color: black;
+
+		}
+
+		.topBar ul li ul li {
+
+			display: none;
+			float: left;
+		}
+
+		.topBar ul li:hover ul li {
+
+			display: block;
+			float: left;
+		}
+
+		.topBar ul li ul li ul {
+
+			float: left !important;
+			display: none;
+
+		}
+
+		.topBar ul li ul li:hover ul {
+
+			display: block;
+			margin-left: 159px;
+			margin-top: -41px;
+
+		}
+
+		.languagePart {
+
+			float: left;
+			color: white;
+			margin-left: 1260px;
+			margin-top: 21px;
+			font-size: 88%;
+
+		}
+
+		.languagePart span {
+
+			float: left;
+			margin: 5px;
+		}
+
+		.languagePart a {
+
+			color: whte;
+
+		}
+
+		.languagePart a:hover {
+
+			color: gray;
+
+		}
+
+
+
+
+		/* search part*/
+
+
+		#search {
+
+			width: 160px;
+			height: 30px;
+			background-color: black;
+			color: white;
+			position: absolute;
+			left: 1040px;
+			top: 20px;
+			padding: 6px;
+			font-size: 100%;
+			border: none;
+			border-radius: 6px;
+			border-top-right-radius: 0px;
+			border-bottom-right-radius: 0px;
+
+		}
+
+		.topBar img {
+
+			margin-top: 6px;
+		}
+
+		#searchImg {
+
+			position: absolute;
+			left: 1206px;
+			top: 14px;
+			width: 30px;
+			height: 30px;
+			border-radius: 6px;
+			border-top-left-radius: 0px;
+			border-bottom-left-radius: 0px;
+		}
+
+		#apply {
+
+			border: 2px solid white;
+			margin-left: 15px;
+			width: 120px;
+			height: 45px;
+			margin-top: -4px;
+
+		}
+
+
+		.clear-div {
+
+			clear: both;
+
+		}
+
+		/* slide show part */
+
+
+		* {
+			box-sizing: border-box
+		}
+
+		/* Slideshow container */
+
+		.slideshow-container {
+
+			max-width: 100%;
+			margin: auto;
+			margin-top: 70px;
+
+
+		}
+
+		/* Hide the images by default */
+
+		.mySlides {
+			display: none;
+
+		}
+
+		/* Next & previous buttons */
+
+		.prev,
+		.next {
+			cursor: pointer;
+			position: absolute;
+			top: 90%;
+			width: auto;
+			color: #2C2C2C;
+			font-weight: bold;
+			font-size: 60px;
+			transition: 0.6s ease;
+			border-radius: 0 3px 3px 0;
+			margin-top: -55px;
+
+		}
+
+		/* Position the "next button" to the right */
+
+		.next {
+
+			right: 0px;
+			border-radius: 3px 0 0 3px;
+
+		}
+
+		/* On hover, add a black background color with a little bit see-through */
+
+		.prev:hover,
+		.next:hover {
+
+			background-color: none;
+			color: #717171;
+
+		}
+
+
+		/* The dots/bullets/indicators */
+
+		.dot {
+
+			cursor: pointer;
+			height: 18px;
+			width: 18px;
+			margin: 0 2px;
+			background-color: #44423B;
+			border-radius: 50%;
+			display: inline-block;
+			transition: background-color 0.6s ease;
+			position: relative;
+			top: -50px;
+		}
+
+		.active,
+		.dot:hover {
+
+			background-color: #717171;
+		}
+
+
+		.sliderButton1 {
+
+			position: absolute;
+			margin-top: -318px;
+			margin-left: 1155px;
+			width: 238px;
+			height: 55px;
+			border-radius: 25px;
+			font-size: 20px;
+			font-weight: bold;
+			background-color: #3A3B3C;
+			color: white;
+
+
+		}
+
+		.sliderButton1:hover {
+
+			background-color: white;
+			color: #3A3B3C;
+		}
+
+		.sliderButton2 {
+
+			position: absolute;
+			margin-top: -413px;
+			margin-left: 770px;
+			width: 238px;
+			height: 55px;
+			border-radius: 25px;
+			font-size: 20px;
+			font-weight: bold;
+			background-color: #3A3B3C;
+			color: white;
+
+		}
+
+		.sliderButton2:hover {
+
+			background-color: white;
+			color: #3A3B3C;
+		}
+
+		.sliderButton3 {
+
+			position: absolute;
+			margin-top: -190px;
+			margin-left: 330px;
+			width: 238px;
+			height: 55px;
+			border-radius: 25px;
+			font-size: 20px;
+			font-weight: bold;
+			background-color: #3A3B3C;
+			color: white;
+
+		}
+
+		.sliderButton3:hover {
+
+			background-color: white;
+			color: #3A3B3C;
+		}
+
+		.sliderButton4 {
+
+			position: absolute;
+			margin-top: -280px;
+			margin-left: 325px;
+			width: 238px;
+			height: 55px;
+			border-radius: 25px;
+			font-size: 20px;
+			font-weight: bold;
+			background-color: #3A3B3C;
+			color: white;
+
+		}
+
+		.sliderButton4:hover {
+
+			background-color: white;
+			color: #3A3B3C;
+		}
+
+		.sliderButton5 {
+
+			position: absolute;
+			margin-top: -157px;
+			margin-left: 110px;
+			width: 238px;
+			height: 55px;
+			border-radius: 25px;
+			font-size: 20px;
+			font-weight: bold;
+			background-color: #3A3B3C;
+			color: white;
+
+		}
+
+		.sliderButton5:hover {
+
+			background-color: white;
+			color: #3A3B3C;
+		}
+
+		.sliderButton6 {
+
+			position: absolute;
+			margin-top: -376px;
+			margin-left: 110px;
+			width: 238px;
+			height: 55px;
+			border-radius: 25px;
+			font-size: 20px;
+			font-weight: bold;
+			background-color: #3A3B3C;
+			color: white;
+
+		}
+
+		.sliderButton6:hover {
+
+			background-color: white;
+			color: #3A3B3C;
+		}
+
+
+
+		/* Fading animation */
+
+		.fade {
+
+			-webkit-animation-name: fade;
+			-webkit-animation-duration: 1.5s;
+			animation-name: fade;
+			animation-duration: 1.5s;
+		}
+
+		@-webkit-keyframes fade {
+
+			from {
+				opacity: .4
+			}
+
+			to {
+				opacity: 1
+			}
+		}
+
+		@keyframes fade {
+
+			from {
+				opacity: .4
+			}
+
+			to {
+				opacity: 1
+			}
+		}
+
+
+		/* First  body after slideshow*/
+
+		.firstBody {
+
+			position: absolute;
+			width: 100%;
+			height: 500px;
+			background-color: rgb(235, 239, 242);
+			margin-top: -26px;
+
+
+		}
+
+		.firstBodyHeader {
+
+			font-family: "Lato", Arial, Tahoma, sans-serif;
+			margin: 30px 0px 0px 415px;
+			font-size: 42px;
+
+		}
+
+
+
+		.container {
+
+			position: relative;
+			width: 0.1%;
+
+		}
+
+		.image {
+
+			display: block;
+			width: 250px;
+			height: 250px;
+			margin: 60px 50px 50px 110px;
+
+
+		}
+
+		.overlay {
+
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			top: 60px;
+			background-color: #2C2C2C;
+			overflow: hidden;
+			width: 250px;
+			height: 250px;
+			-webkit-transform: scale(0);
+			-ms-transform: scale(0);
+			transform: scale(0);
+			-webkit-transition: .3s ease;
+			transition: .3s ease;
+			margin-left: 110px;
+
+
+		}
+
+		.container:hover .overlay {
+
+			-webkit-transform: scale(1);
+			-ms-transform: scale(1);
+			transform: scale(1);
+
+		}
+
+		.stepheader {
+
+			color: #D8D8D8;
+			font-size: 25px;
+			position: absolute;
+			top: 16%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			text-align: center;
+
+		}
+
+		.stepdetail {
+
+			color: white;
+			position: absolute;
+			top: 60%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			text-align: center;
+
+		}
+
+		.step3header {
+
+			color: #D8D8D8;
+			font-size: 25px;
+			position: absolute;
+			top: 21%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			text-align: center;
+		}
+
+		.step4header {
+
+			color: #D8D8D8;
+			font-size: 24px;
+			position: absolute;
+			top: 22%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			text-align: center;
+		}
+
+		.stepd4detail {
+
+			color: white;
+			position: absolute;
+			top: 68%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			text-align: center;
+
+		}
+
+		#step1 {
+
+			float: left;
+		}
+
+
+		#step2 {
+
+			float: left;
+			margin-left: 320px;
+		}
+
+		#step3 {
+
+			float: left;
+			margin-left: 320px;
+		}
+
+		#step4 {
+
+			float: left;
+			margin-left: 320px;
+		}
+
+
+		/* Body 2 university information*/
+
+		.body2background {
+
+			width: 100%;
+			height: 600px;
+			margin-top: 474px;
+		}
+
+		.hungaryImg {
+
+			width: 270px;
+			height: 270px;
+			position: absolute;
+			margin-top: -540px;
+			margin-left: 130px;
+			float: left;
+
+		}
+
+		.hungaryInf p {
+
+			color: #4E4D4D;
+			font-size: 125%;
+			position: absolute;
+			margin-top: -245px;
+			margin-left: 130px;
+
+		}
+
+		.hungaryInf span {
+
+			color: #a8a8a8;
+			font-size: 95%;
+			position: absolute;
+			margin-top: -210px;
+			margin-left: 130px;
+			width: 275px;
+
+		}
+
+		.hungaryInf h5 {
+
+			color: #4E4D4D;
+			font-size: 80%;
+			position: absolute;
+			margin-top: -145px;
+			margin-left: 130px;
+		}
+
+
+		.blueLineHungary {
+
+			border-top: 1px solid #4790D0;
+			width: 110px;
+			position: absolute;
+			margin-left: 130px;
+			margin-top: -160px;
+
+		}
+
+		.helpImg {
+
+			width: 270px;
+			height: 270px;
+			position: absolute;
+			margin-top: -540px;
+			margin-left: 430px;
+			float: left;
+
+		}
+
+		.helpInf p {
+
+			color: #4E4D4D;
+			font-size: 125%;
+			position: absolute;
+			margin-top: -245px;
+			margin-left: 433px;
+
+		}
+
+		.helpInf span {
+			color: #a8a8a8;
+			font-size: 95%;
+			position: absolute;
+			margin-top: -210px;
+			margin-left: 433px;
+			width: 275px;
+
+		}
+
+
+		.blueLinehelp {
+
+			border-top: 1px solid #4790D0;
+			width: 110px;
+			position: absolute;
+			margin-left: 433px;
+			margin-top: -160px;
+
+		}
+
+		.helpInf h5 {
+
+			color: #4E4D4D;
+			font-size: 80%;
+			position: absolute;
+			margin-top: -145px;
+			margin-left: 433px;
+			width: 260px;
+		}
+
+
+		.lkwImg {
+
+			width: 270px;
+			height: 270px;
+			position: absolute;
+			margin-top: -540px;
+			margin-left: 730px;
+			float: left;
+
+
+		}
+
+		.lkwInf p {
+
+			color: #4E4D4D;
+			font-size: 125%;
+			position: absolute;
+			margin-top: -245px;
+			margin-left: 733px;
+
+		}
+
+		.lkwInf span {
+
+			color: #a8a8a8;
+			font-size: 95%;
+			position: absolute;
+			margin-top: -210px;
+			margin-left: 733px;
+			width: 275px;
+
+		}
+
+
+		.blueLineLkw {
+
+			border-top: 1px solid #4790D0;
+			width: 110px;
+			position: absolute;
+			margin-left: 733px;
+			margin-top: -160px;
+
+		}
+
+		.lkwInf h5 {
+
+			color: #4E4D4D;
+			font-size: 80%;
+			position: absolute;
+			margin-top: -145px;
+			margin-left: 733px;
+			width: 260px;
+		}
+
+		.schImg {
+
+			width: 280px;
+			height: 410px;
+			position: absolute;
+			margin-top: -540px;
+			margin-left: 1050px;
+			float: left;
+
+		}
+
+
+		/* Video Part*/
+
+		.videoPart {
+
+			background-color: #FCFCFC;
+			width: 100%;
+			height: 600px;
+			margin-top: -5px;
+		}
+
+		.videoPart video {
+
+			margin-left: 100px;
+			margin-top: 60px;
+		}
+
+		.videoPartHead {
+
+			color: #4E4D4D;
+			font-size: 200%;
+			position: absolute;
+			margin-top: -266px;
+			margin-left: 603px;
+			width: 600px;
+
+		}
+
+		.videoPartInf {
+
+			color: #4E4D4D;
+			font-size: 120%;
+			margin-top: -210px;
+			margin-left: 603px;
+			width: 750px;
+			line-height: 32px;
+			margin-bottom: 28px;
+
+		}
+
+		.videoPartInf1 {
+
+			color: #4E4D4D;
+			font-size: 120%;
+			margin-top: -10px;
+			margin-left: 603px;
+			width: 750px;
+			line-height: 32px;
+			margin-bottom: 28px;
+
+		}
+
+		/* Contact part main page */
+
+		#contactPart {
+
+			width: 100%;
+			height: 300px;
+			background-color: #EDEFF2;
+
+		}
+
+		#mailLogo {
+
+			width: 60px;
+			height: 50px;
+			margin-top: 150px;
+			float: left;
+			margin-left: 150px;
+
+		}
+
+		#whatsLogo {
+
+			width: 50px;
+			height: 50px;
+			float: left;
+			margin-top: 150px;
+			margin-left: 280px;
+
+		}
+
+		#lineLogo {
+
+			width: 45px;
+			height: 45px;
+			float: left;
+			margin-top: 150px;
+			margin-left: 220px;
+
+		}
+
+		#phoneLogo {
+
+			width: 64px;
+			height: 64px;
+			float: left;
+			margin-top: 145px;
+			margin-left: 250px;
+		}
+
+
+		/* contact Part main page */
+
+		#contactPartHeader {
+
+			position: absolute;
+			font-size: 200%;
+			margin-left: 555px;
+			color: #4E4D4D;
+
+		}
+
+		#emailText {
+
+			color: #4E4D4D;
+			position: absolute;
+			margin-left: 230px;
+			margin-top: 140px;
+		}
+
+		#whatsappText {
+
+			color: #4E4D4D;
+			position: absolute;
+			margin-left: 560px;
+			margin-top: 140px;
+		}
+
+		#lineText {
+
+			color: #4E4D4D;
+			position: absolute;
+			margin-left: 830px;
+			margin-top: 140px;
+		}
+
+		#phoneText {
+
+			color: #4E4D4D;
+			position: absolute;
+			margin-left: 1130px;
+			margin-top: 140px;
+		}
+
+		/* Footer */
+
+		.footer {
+
+			background-color: #545454;
+			width: 100%;
+			height: 500px;
+
+
+		}
+
+		#footerFirstPartHead {
+
+			color: #DDDDDD;
+			position: absolute;
+			font-size: 120%;
+			margin-left: 120px;
+			margin-top: 40px;
+		}
+
+		#footerFirstPartInf1 {
+
+			color: #CCCCCC;
+			position: absolute;
+			font-size: 90%;
+			margin-left: 120px;
+			margin-top: 80px;
+			width: 400px;
+			line-height: 24px;
+			margin-bottom: 15px;
+		}
+
+		#footerFirstPartInf2 {
+
+			color: #CCCCCC;
+			position: absolute;
+			font-size: 90%;
+			margin-left: 120px;
+			margin-top: 220px;
+			width: 400px;
+			line-height: 24px;
+			margin-bottom: 15px;
+		}
+
+		/*  footer /second line*/
+
+		#footerSecondPartHead {
+
+			color: #DDDDDD;
+			position: absolute;
+			font-size: 120%;
+			margin-left: 560px;
+			margin-top: 40px;
+
+		}
+
+		#tick1 {
+
+			position: absolute;
+			font-size: 20px;
+			margin-left: 580px;
+			margin-top: 80px;
+		}
+
+		#footerSecondInf1 {
+
+			color: #CCCCCC;
+			position: absolute;
+			font-size: 90%;
+			margin-left: 610px;
+			margin-top: 78px;
+			width: 400px;
+			line-height: 24px;
+
+		}
+
+		#footerSmallLine1 {
+
+			border-top: 1px solid gray;
+			position: absolute;
+			margin-top: 110px;
+			margin-left: 560px;
+			width: 80px;
+		}
+
+		/* second line of seconf part of footer*/
+
+		#tick2 {
+
+			position: absolute;
+			font-size: 20px;
+			margin-left: 580px;
+			margin-top: 130px;
+		}
+
+		#footerSecondInf2 {
+
+			color: #CCCCCC;
+			position: absolute;
+			font-size: 90%;
+			margin-left: 610px;
+			margin-top: 128px;
+			width: 400px;
+			line-height: 24px;
+
+		}
+
+		#footerSmallLine2 {
+
+			border-top: 1px solid gray;
+			position: absolute;
+			margin-top: 160px;
+			margin-left: 560px;
+			width: 80px;
+		}
+
+		/* third line of seconf part of footer*/
+
+		#tick3 {
+
+			position: absolute;
+			font-size: 20px;
+			margin-left: 580px;
+			margin-top: 180px;
+		}
+
+		#footerSecondInf3 {
+
+			color: #CCCCCC;
+			position: absolute;
+			font-size: 90%;
+			margin-left: 610px;
+			margin-top: 178px;
+			width: 400px;
+			line-height: 24px;
+
+		}
+
+		#footerSmallLine3 {
+
+			border-top: 1px solid gray;
+			position: absolute;
+			margin-top: 210px;
+			margin-left: 560px;
+			width: 80px;
+		}
+
+		/* fourth line of seconf part of footer*/
+
+		#tick4 {
+
+			position: absolute;
+			font-size: 20px;
+			margin-left: 580px;
+			margin-top: 230px;
+		}
+
+		#footerSecondInf4 {
+
+			color: #CCCCCC;
+			position: absolute;
+			font-size: 90%;
+			margin-left: 610px;
+			margin-top: 228px;
+			width: 400px;
+			line-height: 24px;
+
+		}
+
+		#footerSmallLine4 {
+
+			border-top: 1px solid gray;
+			position: absolute;
+			margin-top: 285px;
+			margin-left: 560px;
+			width: 80px;
+		}
+
+		/* fourth line of seconf part of footer*/
+
+		#tick5 {
+
+			position: absolute;
+			font-size: 20px;
+			margin-left: 580px;
+			margin-top: 302px;
+		}
+
+		#footerSecondInf5 {
+
+			color: #CCCCCC;
+			position: absolute;
+			font-size: 90%;
+			margin-left: 610px;
+			margin-top: 300px;
+			width: 400px;
+			line-height: 24px;
+
+		}
+
+
+		/* third part of footer / contact part of footer */
+
+		#footerThirdPartHead {
+
+			color: #DDDDDD;
+			position: absolute;
+			font-size: 120%;
+			margin-left: 1020px;
+			margin-top: 40px;
+		}
+
+		#footerThirdPartPhone {
+
+			color: #CCCCCC;
+			position: absolute;
+			font-size: 90%;
+			margin-left: 1020px;
+			margin-top: 80px;
+			width: 400px;
+
+		}
+
+		#footerThirdPartEmail {
+
+			color: #CCCCCC;
+			position: absolute;
+			font-size: 90%;
+			margin-left: 1020px;
+			margin-top: 110px;
+			width: 400px;
+
+		}
+
+		.footer hr {
+
+			position: absolute;
+			margin-top: 430px;
+			width: 100%;
+
+		}
+
+		#copyright {
+
+			position: absolute;
+			color: #CCCCCC;
+			margin-top: 460px;
+			margin-left: 39%;
+		}
+
+
+		/*social media*/
+
+		#socialMedia ul {
+
+			display: flex;
+			position: absolute;
+			transform: translate(-50%, -50%);
+			margin-left: 1135px;
+			margin-top: 325px;
+
+		}
+
+		#socialMedia ul li {
+
+			list-style: none;
+		}
+
+		#socialMedia ul li a {
+
+			width: 60px;
+			height: 60px;
+			background-color: #fff;
+			text-align: center;
+			line-height: 60px;
+			font-size: 40px;
+			margin-left: 13px;
+			display: block;
+			border-radius: 50%;
+			position: relative;
+			overflow: hidden;
+			border: 3px solid #fff;
+
+
+		}
+
+		#socialMedia ul li a .fa {
+
+			position: relative;
+			color: #262626;
+			transition: .7s;
+		}
+
+		#socialMedia ul li a:hover .fa {
+
+			transform: rotateY(360deg);
+			color: white;
+		}
+
+
+		#socialMedia ul li a:before {
+
+			content: '';
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: #f00;
+			transition: .5s;
+
+		}
+
+		#socialMedia ul li a:hover:before {
+
+			top: 0;
+
+
+		}
+
+		#socialMedia ul li:nth-child(1) a:before {
+
+			background-color: #3b5999;
+		}
+
+		#socialMedia ul li:nth-child(2) a:before {
+
+			background-color: #e4405f;
+		}
+
+		#socialMedia ul li:nth-child(3) a:before {
+
+			background-color: #00AFF0;
+		}
+
+		#socialMedia ul li:nth-child(4) a:before {
+
+			background-color: #25D366;
+		}
+	</style>
+
+
+</head>
+
+<body>
+
+
+	<div class="topBar">
+
+		<ul class="topBarMenu">
+
+			<li> <a href="StudyAbroad.html"> Home </a></li>
+
+			<li> <a> Study Abroad </a>
+
+				<ul>
+					<li> <a href="Canada.html"> Canada </a></li>
+					<li> <a href="Usa.html"> USA </a></li>
+					<li> <a> Europe </a>
+
+						<ul>
+
+							<li><a href="Hungary.html">Hungary </a></li>
+							<li><a href="Italy.html">Italy </a></li>
+							<li><a href="Germany.html">Germany </a></li>
+							<li><a href="France.html">France </a></li>
+
+						</ul>
+
+					</li>
+					<li> <a href="Malaysia.html"> Malaysia </a></li>
+				</ul>
+			</li>
+
+			<li> <a href="Ielts.html">IELTS/PTE </a></li>
+
+			<!-- event part disable -->
+
+			<!-- <li> <a href="" id="event">Events </a></li>   -->
+
+			<li> <a href="ContactUs.html">Contact Us </a></li>
+
+			<LI id="apply"> <a href="Apply.html">Apply Now </a></Li>
+
+		</ul>
+
+
+		<input id="search" type="text" onkeyup="searchFunction()" placeholder="Search...">
+
+		<a href=""><img id="searchImg" src="pictures/search5.PNG"></a>
+
+		<!-- language part -->
+		<div class="languagePart">
+			<span><a href="">English</a></span>
+
+			<span>|</span>
+
+			<span><a href="">Japanese</a></span>
+		</div>
+		<!-- <img src="pictures/logooooooo.jpg"> -->
+
+
+	</div>
+
+	<!-- slide show part -->
+
+
+	<div class="slideshow-container">
+
+		<!-- Full-width images with number and caption text -->
+		<div class="mySlides fade">
+
+			<img src="pictures/slide1.png" style="width:100%" height="700px">
+			<a href="Germany.html"><button class="sliderButton1">Apply Now &#62;</button></a>
+
+		</div>
+
+		<div class="mySlides fade">
+
+			<img src="pictures/slide2.png" style="width:100%" height="700px">
+			<a href="Hungary.html"><button class="sliderButton2">Apply Now &#62;</button></a>
+
+
+		</div>
+
+		<div class="mySlides fade">
+
+			<img src="pictures/slide3.png" style="width:100%" height="700px">
+			<a href="Malaysia.html"><button class="sliderButton3">Apply Now &#62;</button></a>
+
+
+		</div>
+
+		<div class="mySlides fade">
+
+			<img src="pictures/slide4.png" style="width:100%" height="700px">
+			<a href="Usa.html"><button class="sliderButton4">Apply Now &#62;</button></a>
+
+
+		</div>
+
+		<div class="mySlides fade">
+
+			<img src="pictures/slide5.png" style="width:100%" height="700px">
+			<a href="Malaysia.html"><button class="sliderButton5">Apply Now &#62;</button></a>
+
+
+		</div>
+
+		<div class="mySlides fade">
+
+			<img src="pictures/slide6.png" style="width:100%" height="700px">
+			<a href="Malaysia.html"><button class="sliderButton6">Apply Now &#62;</button></a>
+
+
+		</div>
+
+		<!-- Next and previous buttons -->
+		<a class="prev" onclick="plusSlides(-1)">&#12296;</a>
+		<a class="next" onclick="plusSlides(1)">&#12297;</a>
+	</div>
+
+
+	<!-- The dots/circles -->
+	<div style="text-align:center">
+
+		<span class="dot" onclick="currentSlide(1)"></span>
+		<span class="dot" onclick="currentSlide(2)"></span>
+		<span class="dot" onclick="currentSlide(3)"></span>
+		<span class="dot" onclick="currentSlide(4)"></span>
+		<span class="dot" onclick="currentSlide(5)"></span>
+		<span class="dot" onclick="currentSlide(6)"></span>
+
+	</div>
+
+
+	<div class="clear-div"></div>
+
+	<!-- First. Body afte slideshow -->
+
+	<div class="firstBody">
+
+		<p class="firstBodyHeader">We are with you in all the Steps</p>
+
+		<div class="container" id="step1">
+
+			<img src="pictures/img1.png" alt="Avatar" class="image">
+
+			<div class="overlay">
+
+				<div class="stepheader">FREE Assessment</div>
+
+				<span class="stepdetail">Let us assist you for your study abroad Journey by filling up an assessment form. Apply now to start a Bright Future!</span>
+
+			</div>
+
+		</div>
+
+		<div class="container" id="step2">
+
+			<img src="pictures/img2.png" alt="Avatar" class="image">
+
+			<div class="overlay">
+
+				<div class="stepheader">FREE Consultation</div>
+
+				<span class="stepdetail">Make an Appointment with our professional consultants Today!</span>
+
+			</div>
+
+		</div>
+
+		<div class="container" id="step3">
+
+			<img src="pictures/img3.png" alt="Avatar" class="image">
+
+			<div class="overlay">
+
+				<div class="step3header">FREE Application Services</div>
+
+				<span class="stepdetail">Our Services for Malaysia and Hungary are Free of Charge. Contact Now!</span>
+
+			</div>
+
+		</div>
+
+		<div class="container" id="step4">
+
+			<img src="pictures/img4.png" alt="Avatar" class="image">
+
+			<div class="overlay">
+
+				<div class="step4header">FREE Visa Process Consultation</div>
+
+				<span class="stepd4detail">Our Visa Consultants will assist you with Documentation and Visa Submission. Get in Touch to take the right steps!</span>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="clear-div"></div>
+
+	<!-- Part 2 University Information -->
+
+	<div>
+
+		<img class="body2background" src="pictures/body2.jpg">
+
+		<div class="hungaryInf" class="helpInf">
+
+			<!-- hungary part -->
+			<img class="hungaryImg" src="pictures/hungary.png">
+
+			<img class="schImg" src="pictures/sch.png" alt="">
+
+			<p>Erasmus Scholarship Hungary</p>
+
+			<span>Study in Europe, Budapest and become an Erasmus Student.</span>
+
+			<h1 class="blueLineHungary"></h1>
+
+			<h5>The most Affordable Universities in Europe!</h5>
+
+			<!-- Help part -->
+			<div class="helpInf">
+
+				<img class="helpImg" src="pictures/help.png">
+
+				<p>Help University</p>
+
+				<span>50% Scholarship Available!</span>
+
+				<h1 class="blueLinehelp"></h1>
+
+				<h5>Master of Entrepreneurship, Master of Software Engineering 6 Months Malaysia 1 year Silicon Valley, USA.</h5>
+
+			</div>
+
+			<!-- lkw part -->
+			<div class="lkwInf">
+
+				<img class="lkwImg" src="pictures/lkw.png">
+
+				<p>Limkokwing University</p>
+
+				<span>50% Scholarship on Entire Program</span>
+
+				<h1 class="blueLineLkw"></h1>
+
+				<h5>Study in the Most globalized University in Malaysia with affordable Fees!</h5>
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<div class="clear-div"></div>
+	<!-- Video poster autoplay -->
+
+	<div class="videoPart">
+
+		<video poster="" autoplay="1" controls="1" loop="1" muted="1" style="max-width:32%;">
+			<source type="video/mp4" src="pictures/step.mp4">
+		</video>
+
+		<p class="videoPartHead">A message from our team!</p>
+
+		<p class="videoPartInf">With a growing portfolio of new partners across Europe, North America and beyond, you will benefit from the opportunity to take part in well-established and quality controlled international exchanges. In many locations, you
+			will have the chance to study another language – however this is not a requirement for Study Abroad as most partners teach in English.</p>
+
+		<p class="videoPartInf1">In addition to the academic and vocational benefits, previous outgoing students have often spoken of the increased level of confidence they have gained – to say nothing of the friends they have met from around the world
+			and the adventures they have had exploring their new environment! We truly believe taking part in an international exchange is a decision you will never regret. We are always happy to discuss your options and give practical support. We hope that
+			our services will encourage you to enhance your future employability and CV whilst having the time of your life!</p>
+
+
+	</div>
+
+	<div class="clear-div"></div>
+
+
+	<!-- Contact Part  -->
+
+	<div id="contactPart">
+
+		<p id="contactPartHeader">Stay in touch with us</p>
+
+		<div>
+
+			<img id="mailLogo" src="pictures/mail.png">
+
+		</div>
+
+		<div>
+
+			<img id="whatsLogo" src="pictures/whats.png">
+
+		</div>
+
+		<div>
+
+			<img id="lineLogo" src="pictures/line.png">
+
+		</div>
+
+		<div>
+
+			<img id="phoneLogo" src="pictures/phone.png">
+
+		</div>
+
+		<!-- contact number and addresses -->
+
+		<div id="emailText">
+
+			<p>Have you any questions?</p>
+
+			<p>Shayan_momeni@yahoo.com</p>
+
+		</div>
+
+		<div id="whatsappText">
+
+			<p>WhatsApp</p>
+
+			<p>+60116099725</p>
+
+		</div>
+
+		<div id="lineText">
+
+			<p>Line</p>
+
+			<p>+601160990725</p>
+
+		</div>
+
+		<div id="phoneText">
+
+			<p>Mobile Phone</p>
+
+			<p>+601160990725</p>
+
+		</div>
+
+
+	</div>
+
+
+
+
+
+	<div class="clear-div"></div>
+
+	<!-- Footer -->
+
+	<div class="footer">
+
+		<!-- First part of footer -->
+
+		<p id="footerFirstPartHead">How We Arise?</p>
+
+		<p id="footerFirstPartInf1">We started back in October 2010 with the goal to help other students to enroll in Malaysian universities. In early 2014 we started offering students the Universities in USA and Europe especially Germany and We could
+			successfully place many international students from various nationalities.</p>
+
+		<p id="footerFirstPartInf2">Currently study vesta ( Registered as Vesta Consulting Sdn. Bhd.) features various private schools, colleges and universities, public universities, polytechnics and professional bodies in Malaysia, USA, Canada , UK,
+			Australia and Europe.​ We are diverse, welcoming, accepting and passionate about being the best we can be. Join us to make your Academic experience unforgettable.</p>
+
+		<!--  Second Part of footer  -->
+
+		<p id="footerSecondPartHead">Our Sevices</p>
+
+		<p id="tick1">&#10004;</p>
+
+		<p id="footerSecondInf1">Free Visa consultation and Documentation assistance</p>
+
+		<p id="footerSmallLine1"></p>
+
+		<!-- Second Part of footer / second line -->
+
+		<p id="tick2">&#10004;</p>
+
+		<p id="footerSecondInf2">Free Scholarship information and application services</p>
+
+		<p id="footerSmallLine2"></p>
+
+		<!-- Second Part of footer / third line -->
+
+		<p id="tick3">&#10004;</p>
+
+		<p id="footerSecondInf3">Free Embassy Interview Preparation</p>
+
+		<p id="footerSmallLine3"></p>
+
+		<!-- Second Part OF footer / fourth line  -->
+
+		<p id="tick4">&#10004;</p>
+
+		<p id="footerSecondInf4">Free Professional advice including visa regulations, accommodation arrangements, travel plans</p>
+
+		<p id="footerSmallLine4"></p>
+
+		<!-- Second Part OF footer / fifth line  -->
+
+		<p id="tick5">&#10004;</p>
+
+		<p id="footerSecondInf5">Free IELTS/ TOEFL/ PTE Preparation Consultation with professional Trainers</p>
+
+
+
+
+		<!-- Third Part of footer / contact Part -->
+
+		<p id="footerThirdPartHead">Contact us</p>
+
+		<p id="footerThirdPartPhone">Phone : +601160990725</p>
+
+		<p id="footerThirdPartEmail">Email : Shayan_momeni@yahoo.com</p>
+
+
+
+		<!-- Last Part Main Page  -->
+
+		<hr>
+
+		<p id="copyright">&#169; Shayan Momeni &#124; All Rights Reserved</p>
+
+		<!-- social Media part -->
+
+		<div id="socialMedia">
+
+			<ul>
+				<li><a href=""><i class="fa fa-facebook"></i></a></li>
+				<li><a href=""><i class="fa fa-instagram"></i></a></li>
+				<li><a href=""><i class="fa fa-skype"></i></a></li>
+				<li><a href=""><i class="fa fa-whatsapp"></i></a></li>
+
+			</ul>
+		</div>
+
+
+	</div>
+
+	</div>
+
+
+
+
+
+
+
+
+	<script type="text/javascript">
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		// Next/previous controls
+		function plusSlides(n) {
+			showSlides(slideIndex += n);
+		}
+
+		// Thumbnail image controls
+		function currentSlide(n) {
+			showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("dot");
+			if (n > slides.length) {
+				slideIndex = 1;
+			}
+			if (n < 1) {
+				slideIndex = slides.length;
+			}
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex - 1].style.display = "block";
+			dots[slideIndex - 1].className += " active";
+		}
+
+		// automatic slideshow
+
+		var slideIndex = 0;
+		carousel();
+
+		function carousel() {
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";
+			}
+			slideIndex++;
+			if (slideIndex > x.length) {
+				slideIndex = 1;
+			}
+			x[slideIndex - 1].style.display = "block";
+			setTimeout(carousel, 7000); // Change image every 6 seconds
+		}
+
+
+		// alert for search part
+	</script>
+
+
+	<script type="text/javascript">
+		$("#search").click(function() {
+
+			alert("Sorry,this engine will be active soon !");
+
+		});
+
+		$("#searchImg").click(function() {
+
+			alert("Sorry,this engine will be active soon !");
+
+		});
+
+
+
+		<!-- disable event part -->
+
+		<!-- <script type="text/javascript">
+
+		$("#event").click(function() {
+
+			alert("There is not any Event available right now !");
+
+		});
+	</script>
+
+
+
+
+	<!-- for search engine not working  -->
+
+
+	<!-- 	<script type="text/javascript">
+
+			function searchFunctio(){
+
+				var input, filter, ul, li, a, i ;
+				input =document.getElementById('search');
+				filter = input.value.toUpperCase();
+				ul=document.getElementByClassName('topBarMenu');
+				li=ul.getElementByTagName('li');
+
+				for( i=0 ; i< li.lenght; i++){
+
+					a= li[i].getElementByTagName('a')[0];
+
+					if(a.innerHTML.toUpperCase().indexOf(filter) > -1){
+
+						li[i].style.display = "";
+
+					}
+
+					else {
+
+						li[i].style.display ='none' ;
+					}
+				}
+			}
+		</script> -->
+
+
+
+
+
+
+
+</body>
+
+</html>

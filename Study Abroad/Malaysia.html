@@ -1,0 +1,2064 @@
+<!DOCTYPE html>
+
+	<html>
+
+	<head>
+
+		<title>Malaysia-Study Abroad</title>
+
+		<meta charset="utf-8">
+
+		<script type="text/javascript" src="jQuery/jquery.min.js"></script>
+
+		<script src="jQuery/jquery-ui/jquery-ui.js"></script>
+
+		<link href="jQuery/jquery-ui/jquery-ui.css" rel="stylesheet">
+
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+		<style type="text/css">
+
+			body {
+
+				margin:0;
+				padding:0;
+				font-family: "Lato", Arial, Tahoma, sans-serif;
+				background-color:#FCFCFC;
+
+
+			}
+
+
+
+			.topBar {
+
+				background-color:#2C2C2C;
+				width:100%;
+				height:70px;
+				position: absolute;
+
+			}
+
+			.topBarMenu {
+
+			position:absolute;
+			left:215px;
+			top:15px;
+		}
+
+			.topBar ul {
+
+			list-style:none;
+			padding:0px;
+			margin:0px;
+
+		}
+
+		.topBar ul li {
+
+			float:left;
+			width:160px;
+			height:40px;
+			background-color:#2C2C2C;
+			opacity:.9;
+			line-height:40px;
+			text-align:center;
+			font-size:20px;
+
+		}
+
+		.topBar a {
+
+			color:#FFFFFF;
+			text-decoration:none;
+			display:block;
+		}
+
+		.topBar ul li a:hover {
+
+			background-color:black;
+
+		}
+
+		.topBar ul li ul li {
+
+			display:none;
+		}
+
+		.topBar ul li:hover ul li{
+
+			display:block;
+		}
+
+		.topBar ul li ul li ul {
+
+			float:left!important;
+			display:none;
+
+		}
+
+		.topBar ul li ul li:hover ul{
+
+			display:block;
+			margin-left:159px;
+			margin-top:-41px;
+
+		}
+
+		#search {
+
+			width:150px;
+			height:18px;
+			background-color:black;
+			color:white;
+			position: absolute;
+			left:1040px;
+			top:16px;
+			padding:6px;
+			font-size:100%;
+			border:none;
+			border-radius:6px;
+			border-top-right-radius:0px;
+			border-bottom-right-radius:0px;
+
+		}
+
+		.topBar img {
+
+			margin-top:6px;
+		}
+
+		#searchImg {
+
+			position:absolute;
+			left:1206px;
+			top:14px;
+			width:30px;
+			height:30px;
+			border-radius:6px;
+			border-top-left-radius:0px;
+			border-bottom-left-radius:0px;
+		}
+
+		#apply {
+
+			border: 2px solid white;
+			margin-left:15px;
+			width:120px;
+			height:40px;
+			margin-top:-4px;
+
+		}
+
+		.languagePart {
+
+			float:left;
+			color:white;
+			margin-left:1260px;
+			margin-top:21px;
+			font-size:88%;
+
+		}
+
+		.languagePart span {
+
+			float:left;
+			margin:5px;
+		}
+
+		.languagePart a {
+
+			color:whte;
+
+		}
+
+		.languagePart a:hover {
+
+			color:gray;
+
+		}
+
+/* Hreader Canada */
+
+		#headerMalaysia {
+
+			width:100%;
+			height:150px;
+			background-color:rgb(230, 230, 230);
+
+		}
+
+		#headerMalaysia p {
+
+			color:#888888;
+			position: absolute;
+			font-size:200%;
+			margin-top:90px;
+			margin-left:130px;
+			text-decoration:underline;
+
+		}
+
+		.malaysiaImg {
+			width:450px;
+			height:250px;
+			margin-left:90px;
+			margin-top:35px;
+
+		}
+
+
+		.malaysiaInf h1 {
+
+			color:#626262;
+			margin-left:600px;
+			margin-top:-267px;
+		}
+
+		.malaysiaInf p {
+
+			color:#626262;
+			margin-left:600px;
+			margin-top:20px;
+			line-height:27px;
+			margin-right:50px;
+
+		}
+
+
+/* Tab menu*/
+
+		.ui-tabs-vertical {
+
+			width:49em;
+			margin-left:510px;
+			margin-top:70px;
+			margin-bottom:70px
+
+
+
+
+		}
+
+  		.ui-tabs-vertical .ui-tabs-nav {
+
+  		 	padding: .2em .1em .2em .2em;
+  		 	float: left;
+  		 	width: 22em;
+  		 	border-right:none;
+  		 	margin-top:3px;
+  		 	margin-left:-362px;
+  		 	margin-top:-5px;
+
+
+  		}
+
+  		.ui-tabs-vertical .ui-tabs-nav li {
+
+  			clear: left;
+  			width: 100%;
+  			border-bottom-width: 0 !important;
+  			border-right-width: 0 !important;
+  			border-top-width: 0 !important;
+  			border-left-width: 0 !important;
+  			margin: 0;
+
+
+
+  		}
+
+ 	    .ui-tabs-vertical .ui-tabs-nav li a {
+
+ 	    	display:block;
+ 	    	color:#757575;
+ 	    	width:20em;
+
+
+ 	     }
+
+
+
+ 	    .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active {
+
+ 	    	padding-bottom: 0;
+ 	    	padding-right: .1em;
+ 	    	border-right-width: 1px;
+ 	    	background-color:white;
+
+
+
+ 	    }
+
+  	    .ui-tabs-vertical .ui-tabs-panel {
+
+  	    	padding: 1em;
+  	    	 float: right;
+  	    	 width: 40em;
+
+
+
+  	    }
+
+  	    .tab-1Head {
+
+  	    	font-size:100%;
+  	    	color:#626262;
+  	    	margin-left:-90px;
+  	    	margin-top:-8px;
+
+  	    }
+
+  	    .tab-1Body {
+
+  	    	line-height:28px;
+  	    	margin-left:-80px;
+
+  	    }
+
+  	    .tab-2Body {
+
+  	    	line-height:28px;
+  	    	margin-left:-80px;
+  	    	margin-top:-3px;
+
+  	    }
+
+  	    .tab-2Head {
+
+  	    	font-weight:bold;
+  	    	margin-left:-90px;
+  	    	color:#626262;
+  	    }
+
+		 .tab-3Body {
+
+  	    	line-height:28px;
+  	    	margin-left:-80px;
+  	    	margin-top:-3px;
+
+  	    }
+
+  	    .tab-3Head {
+
+  	    	font-weight:bold;
+  	    	margin-left:-90px;
+  	    	color:#626262;
+  	    	margin-top:-5px;
+  	    }
+
+
+  	    .malaysiaFlyer {
+
+  	    	width:115%;
+  	    	margin-left:-105px;
+  	    }
+
+
+
+		.helpImg {
+
+			width:650px;
+			height:250px;
+			margin-left:-64px;
+			margin-bottom:20px;
+		}
+
+		.apuImg {
+
+			width:300px;
+			height:200px;
+			margin-left:120px;
+			margin-bottom:20px;
+		}
+
+
+
+
+		/* Validation Form*/
+
+		input {
+
+			height:32px;
+			padding:5px 5px 10px 17px;
+			font-size:20px;
+			border-radius: 5px ;
+			border:1px solid gray;
+			width:380px;
+			margin-top:4px;
+
+
+		}
+
+		label {
+			position: relative;
+			top:15px;
+			width:300px;
+			float:left;
+
+
+		}
+
+			#DateBirth {
+
+			width:265px !important;
+			font-size:17px;
+		}
+
+		#emaildiv {
+
+			width:750px;
+			margin:0 auto ;
+			background-color:#EDEFF2;
+			padding: 10px 20px 20px 20px;
+			margin-top:-20px;
+			margin-left:-131px;
+
+
+
+
+
+		}
+
+		.form-element {
+
+			margin-bottom:10px;
+		}
+
+		 .LevelOfStudy{
+
+	    	width:290px;
+	    	height:50px;
+	    	font-size:17px;
+	    	margin-top:7px;
+	    	margin-bottom:7px;
+
+	    }
+
+		#submitButton {
+
+			width:130px;
+			margin-left:-10px;
+			background-color:#D3D3D3;
+			padding:1px 2px 4px 2px;
+		}
+
+		#submitButton:hover{
+
+			color:white;
+			background-color:black;
+		}
+
+
+		#errorMessage {
+
+			color:red;
+			font-size: 100% !important ;
+
+
+		}
+
+
+
+		#succussMessage {
+
+			color :green;
+			font-size:110% !important;
+			display:none;
+			font-weight: bold;
+			margin-top:20px;
+
+		}
+
+		#textArea {
+
+
+			width:673px;
+			height:200px;
+			border:none;
+			font-size:15px;
+			line-height:20px;
+
+		}
+ /* Footer */
+
+ /* Footer */
+
+		.footer{
+
+			background-color:#545454;
+			width:100%;
+			height:500px;
+
+
+		}
+
+		#footerFirstPartHead {
+
+			color:#DDDDDD;
+			position: absolute;
+			font-size:120%;
+			margin-left:120px;
+			margin-top:40px;
+		}
+
+		#footerFirstPartInf1 {
+
+			color:#CCCCCC;
+			position: absolute;
+			font-size:90%;
+			margin-left:120px;
+			margin-top:80px;
+			width:400px;
+			line-height:24px;
+ 		    margin-bottom:15px;
+		}
+
+		#footerFirstPartInf2 {
+
+			color:#CCCCCC;
+			position: absolute;
+			font-size:90%;
+			margin-left:120px;
+			margin-top:220px;
+			width:400px;
+			line-height:24px;
+ 		    margin-bottom:15px;
+		}
+
+ /*  footer /second line*/
+
+		#footerSecondPartHead {
+
+			color:#DDDDDD;
+			position: absolute;
+			font-size:120%;
+			margin-left:560px;
+			margin-top:40px;
+
+		}
+
+		#tick1 {
+
+			position:absolute;
+			font-size:20px;
+			margin-left:580px;
+			margin-top:80px;
+		}
+
+		#footerSecondInf1 {
+
+			color:#CCCCCC;
+			position: absolute;
+			font-size:90%;
+			margin-left:610px;
+			margin-top:78px;
+			width:400px;
+			line-height:24px;
+
+		}
+
+		#footerSmallLine1 {
+
+			border-top:1px solid gray;
+			position:absolute;
+			margin-top:110px;
+			margin-left:560px;
+			width:80px;
+		}
+
+/* second line of seconf part of footer*/
+
+		#tick2 {
+
+			position:absolute;
+			font-size:20px;
+			margin-left:580px;
+			margin-top:130px;
+		}
+
+		#footerSecondInf2 {
+
+			color:#CCCCCC;
+			position: absolute;
+			font-size:90%;
+			margin-left:610px;
+			margin-top:128px;
+			width:400px;
+			line-height:24px;
+
+		}
+
+		#footerSmallLine2 {
+
+			border-top:1px solid gray;
+			position:absolute;
+			margin-top:160px;
+			margin-left:560px;
+			width:80px;
+		}
+
+/* third line of seconf part of footer*/
+
+		#tick3 {
+
+			position:absolute;
+			font-size:20px;
+			margin-left:580px;
+			margin-top:180px;
+		}
+
+		#footerSecondInf3 {
+
+			color:#CCCCCC;
+			position: absolute;
+			font-size:90%;
+			margin-left:610px;
+			margin-top:178px;
+			width:400px;
+			line-height:24px;
+
+		}
+
+		#footerSmallLine3 {
+
+			border-top:1px solid gray;
+			position:absolute;
+			margin-top:210px;
+			margin-left:560px;
+			width:80px;
+		}
+
+/* fourth line of seconf part of footer*/
+
+		#tick4 {
+
+			position:absolute;
+			font-size:20px;
+			margin-left:580px;
+			margin-top:230px;
+		}
+
+		#footerSecondInf4 {
+
+			color:#CCCCCC;
+			position: absolute;
+			font-size:90%;
+			margin-left:610px;
+			margin-top:228px;
+			width:400px;
+			line-height:24px;
+
+		}
+
+		#footerSmallLine4 {
+
+			border-top:1px solid gray;
+			position:absolute;
+			margin-top:285px;
+			margin-left:560px;
+			width:80px;
+		}
+
+/* fourth line of seconf part of footer*/
+
+		#tick5 {
+
+			position:absolute;
+			font-size:20px;
+			margin-left:580px;
+			margin-top:302px;
+		}
+
+		#footerSecondInf5 {
+
+			color:#CCCCCC;
+			position: absolute;
+			font-size:90%;
+			margin-left:610px;
+			margin-top:300px;
+			width:400px;
+			line-height:24px;
+
+		}
+
+
+/* third part of footer / contact part of footer */
+
+		#footerThirdPartHead{
+
+			color:#DDDDDD;
+			position: absolute;
+			font-size:120%;
+			margin-left:1020px;
+			margin-top:40px;
+		}
+
+		#footerThirdPartPhone {
+
+			color:#CCCCCC;
+			position: absolute;
+			font-size:90%;
+			margin-left:1020px;
+			margin-top:80px;
+			width:400px;
+
+		}
+
+		#footerThirdPartEmail {
+
+			color:#CCCCCC;
+			position: absolute;
+			font-size:90%;
+			margin-left:1020px;
+			margin-top:110px;
+			width:400px;
+
+		}
+
+		.footer hr {
+
+			position:absolute;
+			margin-top:430px;
+			width:100%;
+
+		}
+
+		#copyright {
+
+			position:absolute;
+			color:#CCCCCC;
+			margin-top:460px;
+			margin-left:39%;
+		}
+
+
+ 		 #malaysiaFlyer {
+
+  	    	width:93%;
+  	    	margin-left:25px;
+  	    	margin-top:15px;
+  	    }
+
+  	    /*social media*/
+
+
+		#socialMedia ul {
+
+			display:flex;
+			position: absolute;
+			transform:translate(-50% ,-50%);
+			margin-left:1135px;
+			margin-top:325px;
+
+		}
+
+		#socialMedia ul li {
+
+			list-style: none;
+		}
+
+		#socialMedia ul li a {
+
+			width:60px;
+			height:60px;
+			background-color:#fff;
+			text-align: center;
+			line-height: 60px ;
+			font-size:40px;
+			margin-left:13px;
+			display: block;
+			border-radius:50%;
+			position:relative;
+			overflow:hidden;
+			border:3px solid #fff;
+
+
+		}
+
+		#socialMedia ul li a .fa {
+
+			position: relative;
+			color:#262626;
+			transition:.7s;
+		}
+
+		#socialMedia ul li a:hover .fa{
+
+			transform: rotateY(360deg);
+			color:white;
+		}
+
+
+		#socialMedia ul li a:before {
+
+			content:'';
+			position: absolute;
+			top:100%;
+			left:0;
+			width:100%;
+			height:100%;
+			background:#f00;
+			transition:.5s ;
+
+		}
+
+		#socialMedia ul li a:hover:before {
+
+			top:0;
+
+
+		}
+
+		#socialMedia ul li:nth-child(1) a:before {
+
+			background-color:#3b5999;
+		}
+
+		#socialMedia ul li:nth-child(2) a:before {
+
+			background-color:#e4405f;
+		}
+
+		#socialMedia ul li:nth-child(3) a:before {
+
+			background-color:#00AFF0;
+		}
+
+		#socialMedia ul li:nth-child(4) a:before {
+
+			background-color:#25D366;
+		}
+
+
+
+
+		</style>
+
+
+	</head>
+
+	<body>
+
+<!--  Top Bar -->
+
+		<div class ="topBar">
+
+			<ul class="topBarMenu">
+
+				<li> <a href="StudyAbroad.html"> Home </a></li>
+
+				<li> <a > Study Abroad </a>
+
+					<ul>
+						<li> <a href="Canada.html"> Canada </a></li>
+						<li> <a href="Usa.html"> USA </a></li>
+						<li> <a > Europe </a>
+								<ul >
+
+									<li ><a href="Hungary.html">Hungary </a></li>
+									<li ><a href="Italy.html">Italy </a></li>
+									<li ><a href="Germany.html">Germany </a></li>
+									<li ><a href="France.html">France </a></li>
+
+								</ul>
+						</li>
+						<li> <a href=""> Malaysia </a></li>
+					</ul>
+				</li>
+
+				<li> <a href="Ielts.html">IELTS/PTE </a></li>
+
+				<!-- <li> <a href="" id="event">Events </a></li> -->
+
+				<li> <a href="ContactUs.html">Contact Us </a></li>
+
+				<LI id ="apply"> <a href="Apply.html">Apply Now </a></LI>
+
+			</ul>
+
+
+			<input id= "search" type="text" placeholder="Search...">
+
+			<a href=""><img id="searchImg" src="pictures/search5.PNG"></a>
+
+			<div class="languagePart">
+				<span ><a href="">English</a></span>
+
+				<span >|</span>
+
+				<span ><a href="">Japanese</a></span>
+			</div>
+
+			<!-- <img src="pictures/logooooooo.jpg"> -->
+
+
+		</div>
+
+		<div id ="headerMalaysia">
+
+			<p>Malaysia</p>
+
+		</div>
+
+ <!-- Main Part of Malaysia -->
+
+		<div class ="malaysiaInf">
+
+			<img class="malaysiaImg" src="pictures/malaysiaPage.jpg">
+
+			</video>
+
+			<h1>Study in Malaysia</h1>
+
+			<p>Now that you have completed (or are about to complete) your secondary schooling, you probably want to know what higher education options there are out there. The process of deciding on the right higher education options can be full of overwhelming decisions. Along with what to study, you will need to consider which country and institution to choose, and think about the type of qualification you would like to acquire. Studying abroad doesn't have to be just a dream anymore. Malaysia welcomes all international students from primary to tertiary levels, offering quality education that is more affordable than you may have thought. Besides home-grown schools and universities, Malaysia has world renowned international schools and universities setting up branch campuses in the country to provide world-class education opportunities to bot Malaysian and international students. With more than three decades of experience in providing education to international students, Malaysia has now become a regional education hub offering world-class education. Our well structured higher education system offers student like you the opportunity to pursue an international qualification that is reputable and affordable.</p>
+
+
+
+
+		</div>
+
+
+<!-- Tab Menue  -->
+
+
+		<div id="tabs">
+
+		  <ul>
+
+		    <li><a href="#tabs-1">Why study in Malaysia?</a></li>
+
+		    <li><a href="#tabs-2">Applying for a Visa and Student Pass</a></li>
+
+		    <li><a href="#tabs-3">HELP University</a></li>
+
+		    <li><a href="#tabs-4">Limkokwing University</a></li>
+
+		    <li><a href="#tabs-5">A.P.U University</a></li>
+
+		    <li><a href="#tabs-6">SEGI University & Colleges</a></li>
+
+		    <li><a href="#tabs-7">Flyer</a></li>
+
+		    <li><a href="#tabs-8">Apply Now</a></li>
+
+		  </ul>
+
+		  <div id="tabs-1">
+
+			    <h2 class ="tab-1Head">Top Reasons Most international students choose Malaysia as their study Destination:</h2>
+
+			    <p  class ="tab-1Body">
+
+			    	1. 12th most preferred education destination in the world among international students <br>
+					2. Wide choice of courses and institutions for international students <br>
+					3. Multiple pathways to other international universities <br>
+					4. 8 foreign university branch campuses to choose from <br>
+					5. Malaysia is currently home to more than 172,000 international students <br>
+					6. Transnational degree programmes at its best (UK, US, Australia, New Zealand) <br>
+					7. High quality education that is assured by legislation such as the Malaysian
+					Qualifications Agency Act 2007 <br>
+					8. English as primary medium of instruction <br>
+					9. Kuala Lumpur ranks #1 in QS Top Universities ‘Most Affordable Cities for Students in
+					2016' <br>
+					10. Average cost of Living in Malaysia is lower compared to other popular study destinations <br>
+					11. The Mercer 2016 Quality of Living Rankings lists Kuala Lumpur among the top 10
+					cities in Asia-Pacific <br>
+					12. Malaysia ranked 28th in the Global Peace Index 2015 <br>
+					13. The diversity in Malaysia makes international students exposed to different cultures
+					and traditions <br>
+					14. Malaysia is a food haven and recreation is abundant <br>
+					15. Extensive international student support services: <br>
+					 &nbsp;&nbsp; &nbsp; <b> ▪ </b>visa applications <br>
+					 &nbsp;&nbsp; &nbsp; <b> ▪ </b>institution representative meets student at airport <br>
+					 &nbsp;&nbsp; &nbsp; <b> ▪ </b>accommodation arrangement <br>
+					 &nbsp;&nbsp; &nbsp; <b> ▪ </b>social and recreational activities <br>
+					16. Simple and hassle free system for international students to gain entry into Malaysia <br>
+					17. Gateway to Southeast Asia <br>
+					18. Affordable travel <br>
+					19. Work while you study <br>
+					&nbsp; &nbsp;All international students with a valid student pass are allowed to work part time for a maximum <br>
+					of 20 hours per week during semester breaks or holidays of more than 7 days in specific sectors. <br>
+					20. It’s easy to get around especially in larger cities like Kuala Lumpur
+					&nbsp;&nbsp;&nbsp;  <b> ▪ </b>Light Rapid Transit (LRT) <br>
+				    &nbsp;&nbsp;&nbsp;  <b> ▪ </b>Mass Rapid Transit (MRT) (to be completed soon) <br>
+					&nbsp;&nbsp;&nbsp;  <b> ▪ </b>Taxis, Uber and GrabCar <br>
+					&nbsp;&nbsp;&nbsp;  <b> ▪ </b>KL Monorail <br>
+					&nbsp;&nbsp;&nbsp;  <b> ▪ </b>KTM Komuter <br>
+					&nbsp;&nbsp;&nbsp;  <b> ▪ </b>MyRapid buses <br>
+				</p>
+
+		  </div>
+
+	  <div id="tabs-2">
+
+		   	  <p class="tab-2Head">Point of Entry to Malaysia</p>
+
+		  	  <p class ="tab-2Body">The Malaysian Government has introduced simplified and hassle-free entry procedures to welcome international students like you to study at Malaysian public and private higher educational institutions. <br> <br>
+
+			  A visa is required but the procedure is simple i.e. You do NOT need to apply for a visa from the Malaysian Embassy in your home country in order to enter Malaysia to study, with the exception of students from the People's Republic of China. The visa will be issued to you upon your arrival in Malaysia at the immigration check point provided you have valid travel documents and a letter
+	  		  of approval for a student pass by the Malaysian Immigration Department. <br> <br>
+
+			  (Note: Students from the PRC are required to obtain their Entry Visas from the Malaysian Embassy in Beijing, Guangzhou or Shanghai prior to entering Malaysia.) <br> <br>
+
+			  <b>Applying for a Student Pass through an Institution Prior to Entering Malaysia</b> <br> <br>
+
+			  The process of applying for a student pass is simple. The Malaysian institution of higher education which has offered international students like YOU a place to study at their institution will apply for the student pass on your behalf, prior to your arrival in Malaysia. <br> <br>
+
+			  Applications will be submitted by the respective higher educational institution to the Director of Pass & Permit Division, Malaysia Immigration Department Headquarters in Kuala Lumpur (e-Student Pass System). Students do not need to apply directly to the Immigration Department under this procedure. <br> <br>
+
+			  Prospective students will be informed of their application status by the Immigration Department in Malaysia through their educational institutions within an estimated seven to 14 days after the <br>
+			  application. A prospective international student must have an approved student pass before <br>
+			  entering the country. <br>
+		  &nbsp;&nbsp;   ● Documents required for applying a student pass Malaysian educational institutions are <br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; required to submit the following documents to the Malaysian Immigration Department <br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Headquarters in Kuala Lumpur in order to apply for student passes for students who <br>	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;intend to study at their respective institutions. <br>
+		  &nbsp;&nbsp;          ● An offer letter or letter of acceptance from the educational institution to the
+			                  student <br>
+			&nbsp;&nbsp;        ● Student Pass Application Form (Imm.14) in duplicate <br>
+			 &nbsp;&nbsp;       ● Two photocopies of the student's passport / travel document (with a validity
+			                   period of at least 12 months) <br>
+			 &nbsp;&nbsp;              ● Three passport-sized photographs of the student <br>
+			 &nbsp;&nbsp;              ● One photocopy of the student's medical health examination report <br>
+			 &nbsp;&nbsp;              ● Evidence of student's ability to finance their education cost in Malaysia <br>
+			 &nbsp;&nbsp;          ● The educational institution is required to sign a Personal Bond* prescribed under <br>
+			                   Regulation 18 of the Immigration Regulations 1963 together with payment <br>
+			 Upon approval, student passes are then granted to international students which will allow them direct entry<br>brbrinto Malaysia with the exception of students from The People's Republic of China who are required to <br>obtain a Single-Entry Visa before they come to Malaysia.
+		  	  </p>
+
+
+
+
+
+		  </div>
+
+		  <div id="tabs-3">
+
+		    <img class="helpImg" src="pictures/helpPage1.jpg">
+
+		    <p class="tab-3Head">Background</p>
+
+		    <p class="tab-3Body">
+
+		    	<b>HELP University</b> was founded in 1986 to provide affordable quality educational opportunities for Malaysians. It has since developed into the leading institution of higher learning in Malaysia with an international reputation among universities, research organisations, scholars, business and corporate leaders and governments in Asia Pacific, Europe and North America. <br>
+				HELP University offers a wide and diverse range of programmes covering business, law, management, economics, IT, the social sciences and the humanities at undergraduate and graduate levels. It also plays a leading role in research and development in certain disciplines and subject areas. <br>
+				HELP also collaborates with reputable partners in the UK, the US and Australia in the delivery of programmes. Over a period of 30 years, HELP has coached students to win the highest honours and awards from the University of London, including scholarships for masters and doctoral programmes. It is accorded pride of place in the annals of the University of London International Programmes for contributing significantly to the advancement of its mission of educating people in the global arena. <br>
+				Another indication of the quality of HELP’s academic programmes is the acceptance of its undergraduate degrees for masters and PhD studies at leading universities in the US, the UK and Australia, with many of them winning scholarships and awards for academic excellence. <br>
+				The quality of education imparted by HELP ensures that not only are its graduates preferred over others for employment by multinational companies and discerning employers in many areas of the globe, they also rapidly assume responsible leadership roles and positions wherever they choose to serve.
+		    </p>
+
+		    <img class="helpImg" src="pictures/helpPage2.jpg">
+
+		    <p class="tab-3Body">
+
+				<b>Courses Offered </b><br>
+
+		&nbsp;&nbsp; 1.Foundation in Arts / Level: Pre-University/Foundation Studies <br>
+		&nbsp;&nbsp; 2.Foundation in Science / Level: Pre-University/Foundation Studies <br> <br>
+
+				<b>Diploma Level</b> <br>
+
+		&nbsp;&nbsp; 1. Dip.in Communication <br>
+		&nbsp;&nbsp; 2. Diploma in Business <br>
+		&nbsp;&nbsp; 3. Diploma in Early Childhood Education <br>
+		&nbsp;&nbsp; 4. Diploma in Information Technology <br> <br>
+
+				<b>Bachelor's Degree Level</b> <br>
+
+	    &nbsp;&nbsp;1. American Degree Transfer Program (Liberal Arts) <br>
+	    &nbsp;&nbsp;2. Bac.of Tourism Management (Hons) <br>
+	    &nbsp;&nbsp;3. Bachelor of Business (Hons) Accounting<br>
+	    &nbsp;&nbsp;4. Bachelor of Business (Hons) Entrepreneurship<br>
+ 	    &nbsp;&nbsp;5. Bachelor of Business (Hons) Finance<br>
+		&nbsp;&nbsp;6. Bachelor of Business (Hons) in Hospitality Management<br>
+		&nbsp;&nbsp;7. Bachelor of Business (Hons) in Human Resource Management<br>
+		&nbsp;&nbsp;8. Bachelor of Business (Hons) in International Business<br>
+		&nbsp;&nbsp;9. Bachelor of Business (Hons) in Marketing<br>
+		&nbsp;&nbsp;10. Bachelor of Business Psychology (Hons)<br>
+		&nbsp;&nbsp;11. Bachelor of Communication (Hons) in Marketing Communication<br>
+		&nbsp;&nbsp;12. Bachelor of Communication (Hons) in Media Studies<br>
+		&nbsp;&nbsp;13. Bachelor of Communication (major in Public Relations) (Hons)<br>
+		&nbsp;&nbsp;14. Bachelor of Computer Science (Games & Interactive Media) (Hons)<br>
+		&nbsp;&nbsp;15. Bachelor of Early Childhood Education (Hons)<br>
+		&nbsp;&nbsp;16. Bachelor of Economics (Hons)<br>
+		&nbsp;&nbsp;17. Bachelor of Education (TESL) (Hons)<br>
+		&nbsp;&nbsp;18. Bachelor of Information Tech.(major in Business Information Management) (Hons)<br>
+		&nbsp;&nbsp;19. Bachelor of Information Technology (Hons)<br>
+	    &nbsp;&nbsp;20. Bachelor of Information Technology (Hons) Mobile Computing<br>
+		&nbsp;&nbsp;21. Bachelor of Laws<br>
+	    &nbsp;&nbsp;22. Bachelor of Management (Hons)<br>
+	    &nbsp;&nbsp;23. Bachelor of Psychological Science (Hons) Joint Degree with Flinders University<br>
+		&nbsp;&nbsp;24. Bachelor of Psychology (Hons)<br>
+		&nbsp;&nbsp;25. UK Degree Transfer Programme (Law)<br><br>
+
+				<b>Masters Degree Level</b> <br>
+
+				   &nbsp;&nbsp;1. Master of Accounting and Finance <br>
+				   &nbsp;&nbsp;2. Master of Applied Psychology in Coaching<br>
+				   &nbsp;&nbsp;3. Master of Business Administration<br>
+				   &nbsp;&nbsp;4. Master of Clinical Psychology<br>
+				   &nbsp;&nbsp;5. Master of Corporate Governance<br>
+				   &nbsp;&nbsp;6. Master of Counselling<br>
+				   &nbsp;&nbsp;7. Master of Education (TESL)<br>
+				   &nbsp;&nbsp;8. Master of Entrepreneurship<br>
+				   &nbsp;&nbsp;9. Master of Executive Management<br>
+				   &nbsp;&nbsp;10. Master of Human Resource Development<br>
+				   &nbsp;&nbsp;11. Master of Managerial Psychology<br>
+				   &nbsp;&nbsp;12. Master of Philosophy<br>
+				   &nbsp;&nbsp;13. Master of Project Management<br>
+				   &nbsp;&nbsp;14. Master of Science in Economic Crime Management<br> <br>
+
+				<b>Doctoral Degree (Ph.D) Level</b> <br>
+
+				    &nbsp;&nbsp;1. Doctor of Business Administration <br>
+				    &nbsp;&nbsp;2. Doctor of Philosophy <br> <br>
+
+				<b>Required Documents</b> <br>
+
+				Please email following documents to our email&nbsp;:&nbsp;<b>Shayan_momeni@yahoo.com</b> <br>
+				    &nbsp;&nbsp;● Academic certificates <br>
+				    &nbsp;&nbsp;● Academic results (Transcripts) <br>
+				    &nbsp;&nbsp;● Copy of Passport (All Pages) <br>
+				    &nbsp;&nbsp;● Passport size photo (blue background) <br>
+
+		    </p>
+
+
+
+		  </div>
+
+		    <div id="tabs-4">
+
+		    	<img class="helpImg" src="pictures/lkwPage.jpg">
+
+		    	<p class="tab-3Head">Background</p>
+
+				<p class="tab-3Body">
+
+					Limkokwing University of Creative Technology is an international University with a global presence across Asia, Africa and Europe. Founded in 1991, the University has established worldwide recognition through its innovative brand of creative education merging the best of East and West learning. <br><br>
+
+					Seeing things through completely different lenses, Limkokwing University’s President Tan Sri Dato’ Sri Paduka Dr. Lim Kok Wing pushed for a paradigm shift in learning with creativity and innovation at its forefront. The University is known for its unique programmes focused on design, creativity and innovation, and acts as an incubator to harness talent and skill development. The University pioneered the ‘industry’ programme (industry and university), which sees students work on projects commissioned by its partners and work side-by- side with industry veterans to create original work—all within the University’s multicultural environment. By offering the latest programmes in fashion, architecture, business, media, design, IT, music, games and animation, and exposing students to its industry partners, the University seeks to form the next global generation of achievers who go on to dominate their respective industries. <br><br>
+
+					Students have the added advantage of international networking by making friends from over 150 countries and experiencing a true multicultural society right on campus. These unique aspects of the University can be summed up by its guiding philosophy of embracing diversity and celebrating people's differences. The Government of Malaysia recognises Limkokwing University as the University of Innovation, University of Transformation, University of Edu-Tourism, the Global University of Malaysia, University of Societal Innovation, University for Global Peace and University of Digital Innovation. <br><br>
+
+					Limkokwing University was identified in the special edition by the world’s young brightest scholars as a thriving innovation hub that nurtures a new generation globally. The University is pleased to have been awarded the credibility and independent recognition at student level by the world’s top minds. “One of the most innovative universities in Asia, Limkokwing University of Creative Technology gives its students the opportunity to produce apps, record their own music, set up new businesses and make videos for TV.”, described the Cambridge University Students’ Union (CUSU). <br><br>
+
+					<b>Academic Strengths</b> <br><br>
+
+					Why Choose Limkokwing University of Creative Technology? <br><br>
+
+					   &nbsp;&nbsp;● Part of an international education giant, which has a presence in 3 continents <br>
+					   &nbsp;&nbsp;● Pioneered ‘Industry’ programme in creative fields<br>
+					   &nbsp;&nbsp;● Excellent selection of courses taught by academic experts<br>
+					   &nbsp;&nbsp;● Courses are job-oriented and designed to meet industry-requirements<br>
+					   &nbsp;&nbsp;● Courses are internationally accredited and recognised<br>
+					   &nbsp;&nbsp;● State-of- the-art campus in Malaysia with world- class facilities<br>
+					   &nbsp;&nbsp;● Steadily emerging as a popular study destination among international students<br>
+					   &nbsp;&nbsp;● Affordable fees structure and transparent admissions process<br><br>
+
+					<b>Experience London through the Global University Campus Programme</b> <br>
+					Limkokwing University takes a hands-on approach to learning by collapsing classroom walls and borders, nurturing ties with innovative SMEs and multinational companies, and bringing all these strands of experience to its students at the Limkokwing London Campus, ensuring a truly global education. <br><br>
+
+					Students are given the opportunity to take part in the London Global University Campus programme and get exposed to the latest trends and practices of global companies, including HSBC, Adidas, Apple, Bank of England, Jaguar, Aardman Animations, BBC and Google. They discover a practical approach to solving and handling different problems and situations through project-based research. They get to network and liaise with top experts in their respective fields of study. <br><br>
+
+					The London Global University Campus programme provides students with a short residency in one of the most multicultural, advanced and vibrant cities in the world. They will take part in industry workshops, cultural visits and focused-group lectures by guest speakers from specialised fields and prominent organisations. <br><br>
+
+					<b>Specifically, the programme focuses on:</b><br>
+					   &nbsp;&nbsp;● Employability Skills – The programme helps strengthen key skills that young graduates need to secure high income careers. This includes time management problem-solving and improving the students’ research and presentation skills. <br>
+					   &nbsp;&nbsp;● Networking – The programme provides opportunities for students to meet global industry leaders and other practitioners in their fields of specialisation. <br>
+					   &nbsp;&nbsp;● Innovation – The programme emphasises the importance of establishing, nurturing and developing an innovative culture within each business or organisation. <br>
+					   &nbsp;&nbsp;● Creativity – The programme fosters creativity and encourages students to challenge existing mind-sets through out-of- the-box thinking. <br>
+					   &nbsp;&nbsp;● Industry Workshops and Visits – The programme provides a balanced mix of lectures, workshops and industry site visits. <br><br>
+
+					<b>Scholarships</b><br>
+
+					Apart from individuals who have demonstrated exceptional academic excellence, the University recognizes and endeavours to nurture among others leadership qualities, achievement in sports and chief among them creative approaches to innovation. The scholarships offered by Limkokwing University include: <br>
+					   &nbsp;&nbsp;● Limkokwing Entire Programs Scholarship for Some Nationalities (Up to 50% off)
+
+				</p>
+
+				<p class="tab-3Head">Programs</p>
+
+				<p class="tab-3Body">
+
+					<b>Faculty of Architecture & Built Environment</b><br>
+					BA in Interior Architecture <br>
+					BSc in Construction Management<br>
+					BSc in Facilities Management<br>
+					BSc in Landscape Architecture<br>
+					BSc in Urban Planning & Design<br>
+					BSc in Architectural Studies<br>
+					Bachelor of Architecture<br>
+					Bachelor of Civil Engineering<br>
+					<b>Faculty of Multimedia Creativity</b><br>
+					Animation<br>
+					Creative Multimedia<br>
+					Games Art Development<br>
+					Games Design<br>
+					Mobile Media Production<br>
+					Interior Architecture,Construction Management Facilities Management,Landscape<br>
+					Architecture,Urban Planning & Design,Architecture,Civil Engineering,Animation,Creative<br>
+					Multimedia,Games Art Development,Games Design,Mobile Media Production,Architectural<br>
+					Studies<br>
+					<b>Faculty of Communication, Media & Broadcasting<br></b>
+					Professional Communication<br>
+					Digital Film & Television<br>
+					Event Management<br>
+					Broadcasting & Journalism<br>
+					Communication in Digital Media<br>
+					<b>Faculty of Information & Communication Technology<br></b>
+					Business Information Technology<br>
+					Electronic Commerce<br>
+					Games Technology<br>
+					Information Technology<br>
+					Computer Science in Mobile Computing<br>
+					Software Engineering with Multimedia<br>
+					Information & Communication Technology<br>
+					Business Intelligence System<br>
+					Technopreneurship<br>
+					<b>Faculty of Design Innovation<br></b>
+					Professional Design (Visual Communication)<br>
+					Industrial Design<br>
+					Surface Design<br>
+					Creative Imaging in Digital Photography<br>
+					<b>Faculty of Business Management & Globalisation<br></b>
+					Business Administration (BBA)<br>
+					Business<br>
+					Sports, Health & Fitness Management<br>
+					Public Management<br>
+					Tourism Management<br>
+					Business & Quality Management<br>
+					Global Business Communication
+					Islamic Banking & Finance<br>
+					<b>Faculty of Fashion & Lifestyle Creativity<br></b>
+					BA in Fashion & Retailing<br>
+					<b>Foundation Courses<br></b>
+					Foundation in Built Environment<br>
+					Foundation in Business<br>
+					Foundation in Communication<br>
+					Foundation in Design<br>
+					Foundation in Information Technology<br><br>
+
+
+					<b>Postgraduate Courses (Master & PhD)<br></b>
+					<b>By Research Courses<br></b>
+					PhD in Creative Industries & Art Practice<br>
+					PhD in Information Systems<br>
+					PhD in Management<br><br>
+
+
+					<b>By Coursework Master Programs<br></b>
+					International Contemporary Art & Design<br>
+					Digital Film & Television<br>
+					Communication<br>
+					Project Management<br>
+					Computer Networking<br>
+					Software Engineering<br>
+					Software Management<br>
+					Communication & Public Relation<br>
+					Finance & Banking<br>
+					General Management<br>
+					Human Resource Management<br>
+					Leisure & Tourism Management<br>
+					Multimedia Management<br>
+					MBA in Project Management<br>
+					MBA in Sport Management<br><br>
+
+					<b>Intakes:<br></b>
+					<b>January/May/August</b>
+				</p>
+
+
+
+		    </div>
+
+		      <div id="tabs-5">
+
+		    <img class="helpImg" src="pictures/apuPage.jpg">
+
+		    <p class="tab-3Head">Background</p>
+
+		    <p class="tab-3Body">
+
+				The Asia Pacific University of Technology & Innovation (APU) is amongst Malaysia’s Premier Private Universities, and is where a unique fusion of technology, innovation and creativity works effectively towards preparing graduates for significant roles in business and society globally. <br><br>
+
+				Under the Quacquarelli Symonds (QS) 2017 Ratings, APU was awarded 5-Stars in 4 categories of the QS Stars Ratings – Teaching, Employability, Facilities and Inclusiveness. The QS Stars rating is an international 	rating system that measures achievements and qualities of universities worldwide. In addition, in 2017, APU was also announced as one of Malaysia’s Premier Digital Institution of Higher Learning (IHL) by the Malaysia Digital Economy Corporation (MDEC), for its commitment in offering top-notch digital technology courses and ensuring highly-skilled graduates continue to flourish and fill future digital job demands locally and globally. <br><br>
+
+				The Asia Pacific University has and always will, continue to develop and deliver its academic programmes through unique and well-established international partnerships, particularly with Staffordshire University UK but also with other partners throughout the world. This formidable combination of Malaysian homegrown programmes fortified with international benchmarking, provides our students with the assurance that the qualifications gained from APU truly meet international quality standards. <br> <br>
+
+				<b>Why APU?</b> <br><br>
+
+				   &nbsp;&nbsp;● Proven Track Record of Employable Graduates – 95%+ Employed by Graduation. <br>
+				   &nbsp;&nbsp;● Amongst Highest Rated Emerging Universities in Malaysia – Rated 5-Stars under SETARA 2011, 2013 and 2017 by Ministry of Higher Education Malaysia<br>
+				   &nbsp;&nbsp;● Premier Digital Technology Institute of Higher Learning in Malaysia - awarded by the Malaysian Digital Economy Corporation [MDEC]<br>
+				   &nbsp;&nbsp;● Internationally Recognized by QS – Achieved 5-Stars ranking in 4 categories: Facilities, Teaching, Inclusiveness and Employability<br>
+				   &nbsp;&nbsp;● Internationally Recognized Programmes.<br>
+				   &nbsp;&nbsp;● More than 35,000 Graduates & Alumni.<br>
+				   &nbsp;&nbsp;● Over 11,000 students from more than 110 Countries.<br>
+				   &nbsp;&nbsp;● Award-Winning Students who regularly win both local and international competitions.<br>
+				   &nbsp;&nbsp;● Engineering Degrees Accredited by Board of Engineers (BEM).<br>
+				   &nbsp;&nbsp;● Engineering Degrees Internationally Recognized under Washington Accord.<br><br>
+
+		    </p>
+
+		   <p class="tab-3Head">Latest Achievements in 2017</p>
+
+		   <img class="apuImg" src="pictures/apu1.jpg">
+
+
+			<p class="tab-3Body">
+
+
+					We are pleased to share with you various achievements and <br>
+				accolades attained by APU and our students in year 2017:<br><br>
+				   &nbsp;&nbsp;● Maintained 5-Star (EXCELLENT) Rating in SETARA 2017 – Awarded by the Ministry of Higher Education (MOHE)<br>
+				   &nbsp;&nbsp;● Awarded the Premier Digital Institute of Higher Learning status by the Malaysian Digital Economy Corporation (MDEC)<br>
+				   &nbsp;&nbsp;● Achieved 5-Stars at QS Ranking in 4 categories: Teaching, Employability, Facilities and Inclusiveness<br>
+				   &nbsp;&nbsp;● School of Engineering students emerged as Champions of the ABB Innovation Challenge for the 2nd year in a row<br>
+				   &nbsp;&nbsp;● School of Engineering attained Silver award at the 28th International Invention, Innovation and Technology Exhibition (ITEX) 2017<br>
+				   &nbsp;&nbsp;● School of Engineering student won the IEM Gold Award for excellence in academic results for the 4th year in a row since 2013<br>
+				   &nbsp;&nbsp;● School of Foundation worked with SPCA Pet Care Program and attained the Most Supportive Pet Care Program award, awarded by DYMM Tengku Permaisuri Selangor, Tengku Permaisuri Norashikin<br>
+				   &nbsp;&nbsp;● School of Computing & Technology attained the “Rising Star Award – Academic Sector in Asia Pacific Region” awarded by CompTIA<br>
+				   &nbsp;&nbsp;● School of Computing & Technology students made it internationally by achieving Silver and Bronze medals at the 4th Asian Youth Innovation Awards & Expo that was participated by universities across the Asian region<br><br>
+
+				<b>Campus Facilities<br><br></b>
+
+				Our campus is well-situated in a high-technology park environment, and is equipped to enable<br>
+				every student to get the most out of your study experience at APU.<br>
+				   &nbsp;&nbsp;● Auditoriums and Classrooms<br>
+				   &nbsp;&nbsp;● Cafeteria<br>
+				   &nbsp;&nbsp;● Convenience Shop<br>
+				   &nbsp;&nbsp;● Engineering Labs<br>
+				   &nbsp;&nbsp;● IT Labs<br>
+				   &nbsp;&nbsp;● Computer Games Development Studio<br>
+				   &nbsp;&nbsp;● Green Screen Studio<br>
+				   &nbsp;&nbsp;● Design & Drawing Studio<br>
+				   &nbsp;&nbsp;● Library<br>
+				   &nbsp;&nbsp;● Shuttle bus<br>
+				   &nbsp;&nbsp;● Surau<br><br>
+
+				<b>Undergraduate Courses (Foundation & Bachelor)<br></b>
+				<b>School of Computing & Technology<br></b>
+				BSc in Information Technology<br>
+				BSc in Information Technology in Information Systems Security<br>
+				BSc in Information Technology in Intelligent Systems<br>
+				BSc in Information Technology in Network Computing<br>
+				BSc in Information Technology in Forensic Computing<br>
+				BSc in Information Technology in Mobile Technology<br>
+				BSc in Information Technology in Business Information Systems<br>
+				BSc in Software Engineering<br>
+				BSc in Internet Technology<br>
+				BSc in Enterprise Computing<br>
+				BSc in Technopreneurship<br>
+				BSc in Computer Games Development<br>
+				BSc in Multimedia Technology<br>
+				BSc in Web Media Technology<br>
+				BSc in Media Informatics<br>
+				<b>School of Engineering<br></b>
+				BEng in Electrical & Electronic Engineering<br>
+				BEng in Telecommunication Engineering<br>
+				BEng in Mechatronic Engineering<br>
+				<b>School of Business & Management<br></b>
+				BA in Business Management<br>
+				BA in Business Management in E-Business<br>
+				BA in Business Management in E-Procurement<br>
+				BA in International Business Management<br>
+				BA in Marketing Management<br>
+				BA in Human Resource Management<br>
+				BA in Tourism Management<br>
+				BA in Services Management<br>
+				BA in Media Marketing<br>
+				<b>BSc in Media Informatics<br></b>
+				School of Accounting, Finance & Quantitative Studies<br>
+				BA in Accounting & Finance<br>
+				BA in Accounting & Finance in Forensic Accounting<br>
+				BA in Accounting & Finance in Taxation<br>
+				Bachelor in Banking & Finance<br>
+				Bachelor in Banking & Finance in Financial Planning<br>
+				Bachelor in Banking & Finance in Investment & Risk Management<br>
+				Bachelor in Islamic Banking & Finance<br>
+				BSc in Actuarial Studies<br>
+				BSc in Management Science<br>
+				<b>Foundation Courses<br></b>
+				Foundation in Business & Finance<br>
+				Foundation in Technology & Business & Finance<br>
+				Foundation in Engineering & Technology<br><br>
+
+				<b>Postgraduate Courses (Master & PhD)<br></b>
+				<b>UK Master Degree Courses (Staffordshire University)<br></b>
+				MSc in Information Technology Management<br>
+				MSc in Technology Management<br>
+				MSc in Software Engineering<br>
+				MSc in Mobile Computer Systems<br>
+				MSc in Computing<br>
+				MSc in Computer Science<br>
+				Master of Business Administration (MBA)<br>
+				Master of Business Administration (MBA) IT Sector<br>
+				<b>Dual Master Degree Courses (APU & Staffordshire University)<br></b>
+				MSc in Global Marketing Management<br>
+				MSc in International Business Communication<br>
+				Master of Business Administration (MBA) (Euro - Asia Business)<br>
+				<b>PhD Courses (APU)<br></b>
+				PhD in Business<br>
+				PhD in Computing<br>
+				PhD in Finance<br>
+				PhD in Management<br>
+				PhD in Technology<br><br>
+
+
+				<b>Intakes :<br></b>
+				<b>January/ April / May / August / November</b>
+			</p>
+
+		  </div>
+
+
+		    <div id="tabs-6">
+
+
+		   		<img class="helpImg" src="pictures/segiPage.jpg">
+
+			    <p class ="tab-2Head">Background</p>
+
+
+
+			    <p  class ="tab-2Body">
+
+			    	<b>SEGi University and Colleges (SEGi)</b> first opened its doors as Systematic College in 1977 in the heart of Kuala Lumpur’s commercial district. Since then, SEGi has experienced significant growth by adapting and catering to an increasing demand for higher academic and professional qualifications in Malaysia. <br><br>
+
+					<b>SEGi University</b> is the flagship campus and is located at Kota Damansara. Having a university campus means students can choose to pursue a qualification from SEGi University or from any one of its twinning university partners from the UK, the US and Australia. <br><br>
+
+					The other SEGi campuses offer a wide range of bachelor’s degree or master programmes from <br><br>
+
+					<b>Why Segi?</b> <br><br>
+
+					<b>SEGi</b> constantly strives to upgrade, innovate and develop its programmes to truly reflect current industry needs and employment needs by engaging closely with industry experts. <br><br>
+
+
+					<b>These industry</b> experts are highly successful professionals in their own industries who are able to share their expansive experience directly with the students or by keeping the curriculum up-to-date. <br><br>
+
+
+					<b>What</b> makes SEGi an attractive choice to many students is also its wide variety of programmesfrom foundation to doctorate level. This includes twinning programmes with well-known university partners. <br><br>
+
+
+					<b>SEGi’s consortium</b> of global partners consists of Abertay University, University of Greenwich, Teesside University, University of Sunderland, University of London, York St Jon University, and University of St Mark & St John from the UK; Troy University from USA; and University of Southern Queensland from Australia. <br><br>
+
+					<b>Programme outline</b><br><br>
+
+					<b>The following fields of study are offered by SEGi University and Colleges:</b><br><br>
+
+
+					<b>Undergraduate studies:</b><br>
+					   &nbsp;&nbsp;● Pre-university programmes <br>
+					   &nbsp;&nbsp;● Medicine <br>
+					   &nbsp;&nbsp;● Pharmacy <br>
+					   &nbsp;&nbsp;● Optometry and Vision Sciences <br>
+					   &nbsp;&nbsp;● Allied Health Sciences <br>
+					   &nbsp;&nbsp;● Dentistry <br>
+					   &nbsp;&nbsp;● Business and Accounting <br>
+					   &nbsp;&nbsp;● Engineering <br>
+					   &nbsp;&nbsp;● Built Environment <br>
+					   &nbsp;&nbsp;● Technology and Innovation <br>
+					   &nbsp;&nbsp;● Creative Arts and Design <br>
+					   &nbsp;&nbsp;● Communication Studies <br>
+					   &nbsp;&nbsp;● American Degree Program (awarded by Troy University) <br>
+					   &nbsp;&nbsp;● Early Childhood Care and Education <br>
+					   &nbsp;&nbsp;● Hospitality and Tourism <br>
+					   &nbsp;&nbsp;● Law <br>
+					   &nbsp;&nbsp;● Professional Studies <br>
+					   &nbsp;&nbsp;● English Language <br>
+					   &nbsp;&nbsp;● Vocational Programmes <br> <br>
+
+
+					<b>Postgraduate studies:<br></b>
+					   &nbsp;&nbsp;● Doctor of Business Administration <br>
+					   &nbsp;&nbsp;● Master of Business Administration (Global Business) <br>
+					   &nbsp;&nbsp;● Master of Business Administration (General Management) <br>
+					   &nbsp;&nbsp;● Master of Business Administration (Entrepreneurship) <br>
+					   &nbsp;&nbsp;● Master of Information Technology <br>
+					   &nbsp;&nbsp;● Master of Business Administration (UOS MBA) <br>
+					   &nbsp;&nbsp;● Master of Business Administration (USQ MBA) <br>
+					   &nbsp;&nbsp;● Master of Education (MEd) <br>
+					   &nbsp;&nbsp;● Master in Financial Planning <br>
+					   &nbsp;&nbsp;● MSc Information Systems Management<br>
+					   &nbsp;&nbsp;● MSc Engineering Management<br>
+					   &nbsp;&nbsp;● MSc (Engineering) by research<br>
+					   &nbsp;&nbsp;● MSc (Vision Science) by research<br>
+					   &nbsp;&nbsp;● MSc (Information Technology) by research<br>
+					   &nbsp;&nbsp;● MSc Telecommunication Engineering<br>
+					   &nbsp;&nbsp;● Master of Business Administration (International Business) (UOG MBA)<br>
+					   &nbsp;&nbsp;● PhD (Management)<br>
+					   &nbsp;&nbsp;● PhD (Environmental Science) by research<br>
+					   &nbsp;&nbsp;● PhD (Engineering) by research<br>
+					   &nbsp;&nbsp;● PhD (Information Technology) by research<br>
+					   &nbsp;&nbsp;● PhD (Education) by research<br>
+				</p>
+
+		  </div>
+
+		   <div id="tabs-7">
+
+		    	<img class="malaysiaFlyer" src="pictures/malaysia.jpg">
+
+		    </div>
+
+		    <div id="tabs-8">
+
+				<div id ="emaildiv">
+
+			<form action="https://formspree.io/shayan_momeni@yahoo.com" method="POST" >
+
+			<h2 >Assessment Form</h2>
+
+			<p class="headerValidation">All fields are required</p>
+
+		<div class ="form-element">
+
+			<label for ="FirstName">First Name</label>
+			<input type="name" name ="FirstName" id ="FirstName" placeholder="eg.Shayan">
+
+		</div>
+
+		<div class ="form-element">
+
+			<label for ="LastName">Last Name</label>
+			<input type="name" name ="LastName" id ="LastName" placeholder="eg.Momeni">
+
+		</div>
+
+		<div class ="form-element">
+
+			<label for ="DateBirth">Date of Birth</label>
+			<input type="date" name ="Date of Birth" id ="DateBirth" placeholder="eg.YY/DD/MM">
+
+		</div>
+
+
+
+		<div class ="form-element">
+
+			<label for ="Nationality">Nationality</label>
+
+			<select class ="LevelOfStudy" name="nationality">
+
+			  <option value="">-- select one --</option>
+			  <option value="afghan">Afghan</option>
+			  <option value="albanian">Albanian</option>
+			  <option value="algerian">Algerian</option>
+			  <option value="american">American</option>
+			  <option value="andorran">Andorran</option>
+			  <option value="angolan">Angolan</option>
+			  <option value="antiguans">Antiguans</option>
+			  <option value="argentinean">Argentinean</option>
+			  <option value="armenian">Armenian</option>
+			  <option value="australian">Australian</option>
+			  <option value="austrian">Austrian</option>
+			  <option value="azerbaijani">Azerbaijani</option>
+			  <option value="bahamian">Bahamian</option>
+			  <option value="bahraini">Bahraini</option>
+			  <option value="bangladeshi">Bangladeshi</option>
+			  <option value="barbadian">Barbadian</option>
+			  <option value="barbudans">Barbudans</option>
+			  <option value="batswana">Batswana</option>
+			  <option value="belarusian">Belarusian</option>
+			  <option value="belgian">Belgian</option>
+			  <option value="belizean">Belizean</option>
+			  <option value="beninese">Beninese</option>
+			  <option value="bhutanese">Bhutanese</option>
+			  <option value="bolivian">Bolivian</option>
+			  <option value="bosnian">Bosnian</option>
+			  <option value="brazilian">Brazilian</option>
+			  <option value="british">British</option>
+			  <option value="bruneian">Bruneian</option>
+			  <option value="bulgarian">Bulgarian</option>
+			  <option value="burkinabe">Burkinabe</option>
+			  <option value="burmese">Burmese</option>
+			  <option value="burundian">Burundian</option>
+			  <option value="cambodian">Cambodian</option>
+			  <option value="cameroonian">Cameroonian</option>
+			  <option value="canadian">Canadian</option>
+			  <option value="cape verdean">Cape Verdean</option>
+			  <option value="central african">Central African</option>
+			  <option value="chadian">Chadian</option>
+			  <option value="chilean">Chilean</option>
+			  <option value="chinese">Chinese</option>
+			  <option value="colombian">Colombian</option>
+			  <option value="comoran">Comoran</option>
+			  <option value="congolese">Congolese</option>
+			  <option value="costa rican">Costa Rican</option>
+			  <option value="croatian">Croatian</option>
+			  <option value="cuban">Cuban</option>
+			  <option value="cypriot">Cypriot</option>
+			  <option value="czech">Czech</option>
+			  <option value="danish">Danish</option>
+			  <option value="djibouti">Djibouti</option>
+			  <option value="dominican">Dominican</option>
+			  <option value="dutch">Dutch</option>
+			  <option value="east timorese">East Timorese</option>
+			  <option value="ecuadorean">Ecuadorean</option>
+			  <option value="egyptian">Egyptian</option>
+			  <option value="emirian">Emirian</option>
+			  <option value="equatorial guinean">Equatorial Guinean</option>
+			  <option value="eritrean">Eritrean</option>
+			  <option value="estonian">Estonian</option>
+			  <option value="ethiopian">Ethiopian</option>
+			  <option value="fijian">Fijian</option>
+			  <option value="filipino">Filipino</option>
+			  <option value="finnish">Finnish</option>
+			  <option value="french">French</option>
+			  <option value="gabonese">Gabonese</option>
+			  <option value="gambian">Gambian</option>
+			  <option value="georgian">Georgian</option>
+			  <option value="german">German</option>
+			  <option value="ghanaian">Ghanaian</option>
+			  <option value="greek">Greek</option>
+			  <option value="grenadian">Grenadian</option>
+			  <option value="guatemalan">Guatemalan</option>
+			  <option value="guinea-bissauan">Guinea-Bissauan</option>
+			  <option value="guinean">Guinean</option>
+			  <option value="guyanese">Guyanese</option>
+			  <option value="haitian">Haitian</option>
+			  <option value="herzegovinian">Herzegovinian</option>
+			  <option value="honduran">Honduran</option>
+			  <option value="hungarian">Hungarian</option>
+			  <option value="icelander">Icelander</option>
+			  <option value="indian">Indian</option>
+			  <option value="indonesian">Indonesian</option>
+			  <option value="iranian">Iranian</option>
+			  <option value="iraqi">Iraqi</option>
+			  <option value="irish">Irish</option>
+			  <option value="israeli">Israeli</option>
+			  <option value="italian">Italian</option>
+			  <option value="ivorian">Ivorian</option>
+			  <option value="jamaican">Jamaican</option>
+			  <option value="japanese">Japanese</option>
+			  <option value="jordanian">Jordanian</option>
+			  <option value="kazakhstani">Kazakhstani</option>
+			  <option value="kenyan">Kenyan</option>
+			  <option value="kittian and nevisian">Kittian and Nevisian</option>
+			  <option value="kuwaiti">Kuwaiti</option>
+			  <option value="kyrgyz">Kyrgyz</option>
+			  <option value="laotian">Laotian</option>
+			  <option value="latvian">Latvian</option>
+			  <option value="lebanese">Lebanese</option>
+			  <option value="liberian">Liberian</option>
+			  <option value="libyan">Libyan</option>
+			  <option value="liechtensteiner">Liechtensteiner</option>
+			  <option value="lithuanian">Lithuanian</option>
+			  <option value="luxembourger">Luxembourger</option>
+			  <option value="macedonian">Macedonian</option>
+			  <option value="malagasy">Malagasy</option>
+			  <option value="malawian">Malawian</option>
+			  <option value="malaysian">Malaysian</option>
+			  <option value="maldivan">Maldivan</option>
+			  <option value="malian">Malian</option>
+			  <option value="maltese">Maltese</option>
+			  <option value="marshallese">Marshallese</option>
+			  <option value="mauritanian">Mauritanian</option>
+			  <option value="mauritian">Mauritian</option>
+			  <option value="mexican">Mexican</option>
+			  <option value="micronesian">Micronesian</option>
+			  <option value="moldovan">Moldovan</option>
+			  <option value="monacan">Monacan</option>
+			  <option value="mongolian">Mongolian</option>
+			  <option value="moroccan">Moroccan</option>
+			  <option value="mosotho">Mosotho</option>
+			  <option value="motswana">Motswana</option>
+			  <option value="mozambican">Mozambican</option>
+			  <option value="namibian">Namibian</option>
+			  <option value="nauruan">Nauruan</option>
+			  <option value="nepalese">Nepalese</option>
+			  <option value="new zealander">New Zealander</option>
+			  <option value="ni-vanuatu">Ni-Vanuatu</option>
+			  <option value="nicaraguan">Nicaraguan</option>
+			  <option value="nigerien">Nigerien</option>
+			  <option value="north korean">North Korean</option>
+			  <option value="northern irish">Northern Irish</option>
+			  <option value="norwegian">Norwegian</option>
+			  <option value="omani">Omani</option>
+			  <option value="pakistani">Pakistani</option>
+			  <option value="palauan">Palauan</option>
+			  <option value="panamanian">Panamanian</option>
+			  <option value="papua new guinean">Papua New Guinean</option>
+			  <option value="paraguayan">Paraguayan</option>
+			  <option value="peruvian">Peruvian</option>
+			  <option value="polish">Polish</option>
+			  <option value="portuguese">Portuguese</option>
+			  <option value="qatari">Qatari</option>
+			  <option value="romanian">Romanian</option>
+			  <option value="russian">Russian</option>
+			  <option value="rwandan">Rwandan</option>
+			  <option value="saint lucian">Saint Lucian</option>
+			  <option value="salvadoran">Salvadoran</option>
+			  <option value="samoan">Samoan</option>
+			  <option value="san marinese">San Marinese</option>
+			  <option value="sao tomean">Sao Tomean</option>
+			  <option value="saudi">Saudi</option>
+			  <option value="scottish">Scottish</option>
+			  <option value="senegalese">Senegalese</option>
+			  <option value="serbian">Serbian</option>
+			  <option value="seychellois">Seychellois</option>
+			  <option value="sierra leonean">Sierra Leonean</option>
+			  <option value="singaporean">Singaporean</option>
+			  <option value="slovakian">Slovakian</option>
+			  <option value="slovenian">Slovenian</option>
+			  <option value="solomon islander">Solomon Islander</option>
+			  <option value="somali">Somali</option>
+			  <option value="south african">South African</option>
+			  <option value="south korean">South Korean</option>
+			  <option value="spanish">Spanish</option>
+			  <option value="sri lankan">Sri Lankan</option>
+			  <option value="sudanese">Sudanese</option>
+			  <option value="surinamer">Surinamer</option>
+			  <option value="swazi">Swazi</option>
+			  <option value="swedish">Swedish</option>
+			  <option value="swiss">Swiss</option>
+			  <option value="syrian">Syrian</option>
+			  <option value="taiwanese">Taiwanese</option>
+			  <option value="tajik">Tajik</option>
+			  <option value="tanzanian">Tanzanian</option>
+			  <option value="thai">Thai</option>
+			  <option value="togolese">Togolese</option>
+			  <option value="tongan">Tongan</option>
+			  <option value="trinidadian or tobagonian">Trinidadian or Tobagonian</option>
+			  <option value="tunisian">Tunisian</option>
+			  <option value="turkish">Turkish</option>
+			  <option value="tuvaluan">Tuvaluan</option>
+			  <option value="ugandan">Ugandan</option>
+			  <option value="ukrainian">Ukrainian</option>
+			  <option value="uruguayan">Uruguayan</option>
+			  <option value="uzbekistani">Uzbekistani</option>
+			  <option value="venezuelan">Venezuelan</option>
+			  <option value="vietnamese">Vietnamese</option>
+			  <option value="welsh">Welsh</option>
+			  <option value="yemenite">Yemenite</option>
+			  <option value="zambian">Zambian</option>
+			  <option value="zimbabwean">Zimbabwean</option>
+
+			</select>
+
+		</div>
+
+		<div class ="form-element">
+
+			<label for ="LevelOfStudy">Level of Study you are interested in to Apply</label>
+
+			<select class ="LevelOfStudy">
+
+			  <option value="">-- select one --</option>
+			  <option value="High School">High School Graduate Or Equivalent</option>
+			  <option value="Diploma Degree">Diploma Degree</option>
+			  <option value="Bachelor's Degree">Bachelor's Degree</option>
+			  <option value="Master's Degree">Master's Degree</option>
+			  <option value="PHD/MBA">PHD/MBA</option>
+			  <option value="English Language Course">English Language Course</option>
+
+			</select>
+
+		</div>
+
+		<div class ="form-element">
+
+			<label for ="Planning">I am Planning to study in...</label>
+
+			<select class ="LevelOfStudy">
+
+			  <option value="">-- select one --</option>
+			  <option value="USA">USA</option>
+			  <option value="Canada">Canada</option>
+			  <option value="Italy">Italy</option>
+			  <option value="Swizerland">Swizerland</option>
+			  <option value="Hungary">Hungary</option>
+			  <option value="Sweden">Sweden</option>
+			  <option value="France">France</option>
+			  <option value="Malaysia">Malaysia</option>
+			  <option value="Spain">Spain</option>
+			  <option value="IELTS/PTE">IELTS/PTE</option>
+
+			</select>
+
+		</div>
+
+
+		<div class ="form-element">
+
+			<label for ="Telephone">Telephone</label>
+			<input type="text" name ="Telephone" id ="Telephone" placeholder="eg.0123456789">
+
+		</div>
+
+		<div class ="form-element">
+
+			<label for ="email">Email</label>
+			<input type="text" name ="email" id ="email" placeholder="eg.Shayan_momeni@yahoo.com">
+
+		</div>
+
+		<div>
+			 <br>
+			<p>Tell us More about Yourself</p>
+
+			<textarea id="textArea" name="Message"></textarea>
+
+			<br>
+			<br>
+
+		</div>
+
+		<div class ="form-element">
+
+
+			<input type="submit" id ="submitButton" value ="Sign up">
+
+
+		</div>
+
+
+
+		<div>
+			<div id ="errorMessage"> </div>
+			<div id="succussMessage">It is done successfully !</div>
+
+		</div>
+
+	</div>
+</form>
+</div>
+
+
+
+
+
+
+					<script type="text/javascript">
+
+						function isEmail(email) {
+
+				 		 var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+				 		 return regex.test(email);
+
+												}
+
+						$("#submitButton").click(function (){
+
+							var errorMessage ="";
+
+							var fieldsMissing ="";
+
+
+							if ($("#FirstName").val() == ""){
+
+								fieldsMissing += "<p >First Name !";
+							}
+
+							if ($("#LastName").val() == ""){
+
+								fieldsMissing += "<p>Last Name !";
+							}
+
+							if ($("#DateBirth").val() == ""){
+
+								fieldsMissing += "<p>Date of Birth !";
+							}
+
+							if ($("#Nationality").val() == ""){
+
+								fieldsMissing += "<p>Nationality !";
+							}
+
+
+
+							if ($("#email").val() == ""){
+
+								fieldsMissing += "<p>Email !";
+							}
+
+							if ($("#Telephone").val() ==""){
+
+								fieldsMissing +="<p>Telephone !";
+							}
+
+
+
+
+							if (fieldsMissing != ""){
+
+								errorMessage +="<p> The following field(s) are missing : " + fieldsMissing;
+							}
+
+
+
+
+							if( isEmail($("#email").val()) == false){
+
+								errorMessage += "<p> Your Email Address is not valid ! </p>";
+
+							}
+
+							if ($.isNumeric($("#Telephone").val()) == false){
+
+							   errorMessage += "<p> Your Telephone Number is not correct ! </p> ";
+
+							}
+
+
+
+							if(errorMessage != ""){
+
+								$("#errorMessage").html(errorMessage);
+
+							}else {
+
+								$("#succussMessage").show();
+								$("#errorMessage").hide();
+							}
+						});
+
+					</script>
+
+				</div>
+
+		    </div>
+
+	</div>
+
+		<script type="text/javascript">
+
+			 $( function() {
+
+			    $( "#tabs" ).tabs().addClass( "ui-tabs-vertical ui-helper-clearfix" );
+			    $( "#tabs li" ).removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );
+			  } );
+
+		</script>
+
+		<script type="text/javascript">
+
+			$("#event").click(function(){
+
+				alert("There is not any Event available right now !");
+
+			});
+
+		</script>
+
+<!-- alert for search part -->
+
+		</script>
+
+
+		<script type="text/javascript">
+
+		$("#search").click(function(){
+
+				alert("Sorry,this engine will be active soon !");
+
+		});
+
+		$("#searchImg").click(function(){
+
+				alert("Sorry,this engine will be active soon !");
+
+		});
+
+		</script>
+
+
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+
+		<div class="footer">
+
+	<!-- First part of footer -->
+
+			<p id="footerFirstPartHead">How We Arise?</p>
+
+			<p id="footerFirstPartInf1">We started back in October 2010 with the goal to help other students to enroll in Malaysian universities. In early 2014 we started offering students the Universities in USA and Europe especially Germany and We could successfully place many international students from various nationalities.</p>
+
+			<p id="footerFirstPartInf2">Currently study vesta ( Registered as Vesta Consulting Sdn. Bhd.) features various private schools, colleges and universities, public universities, polytechnics and professional bodies in Malaysia, USA, Canada , UK, Australia and Europe.​ We are diverse, welcoming, accepting and passionate about being the best we can be. Join us to make your Academic experience unforgettable.</p>
+
+	<!--  Second Part of footer  -->
+
+			<p id="footerSecondPartHead">Our Sevices</p>
+
+			<p id="tick1">&#10004;</p>
+
+			<p id="footerSecondInf1">Free Visa consultation and Documentation assistance</p>
+
+			<p id="footerSmallLine1"></p>
+
+	<!-- Second Part of footer / second line -->
+
+			<p id="tick2">&#10004;</p>
+
+			<p id="footerSecondInf2">Free Scholarship information and application services</p>
+
+			<p id="footerSmallLine2"></p>
+
+	<!-- Second Part of footer / third line -->
+
+			<p id="tick3">&#10004;</p>
+
+			<p id="footerSecondInf3">Free Embassy Interview Preparation</p>
+
+			<p id="footerSmallLine3"></p>
+
+	<!-- Second Part OF footer / fourth line  -->
+
+			<p id="tick4">&#10004;</p>
+
+			<p id="footerSecondInf4">Free Professional advice including visa regulations, accommodation arrangements, travel plans</p>
+
+			<p id="footerSmallLine4"></p>
+
+	<!-- Second Part OF footer / fifth line  -->
+
+			<p id="tick5">&#10004;</p>
+
+			<p id="footerSecondInf5">Free IELTS/ TOEFL/ PTE Preparation Consultation with professional Trainers</p>
+
+
+
+
+	<!-- Third Part of footer / contact Part -->
+
+			<p id ="footerThirdPartHead">Contact us</p>
+
+			<p id="footerThirdPartPhone">Phone : +601160990725</p>
+
+			<p id="footerThirdPartEmail">Email : Shayan_momeni@yahoo.com</p>
+
+
+
+	<!-- Last Part Main Page  -->
+
+			<hr>
+
+			<p id ="copyright">&#169; Shayan Momeni &#124; All Rights Reserved</p>
+
+
+<!-- social Media part -->
+
+
+	<div id ="socialMedia">
+
+		<ul>
+			<li><a href=""><i class="fa fa-facebook"></i></a></li>
+			<li><a href=""><i class="fa fa-instagram"></i></a></li>
+			<li><a href=""><i class="fa fa-skype"></i></a></li>
+			<li><a href=""><i class="fa fa-whatsapp"></i></a></li>
+
+		</ul>
+	</div>
+
+
+	</div>
+
+
+
+
+	</body>
+</html>

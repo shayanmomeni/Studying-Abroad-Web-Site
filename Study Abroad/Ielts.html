@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>IELTS/PTE-Study Vesta</title>
+
+	<meta charset="utf-8">
+
+	<script type="text/javascript" src="jQuery/jquery.min.js"></script>
+
+	<script src="jQuery/jquery-ui/jquery-ui.js"></script>
+
+	<link href="jQuery/jquery-ui/jquery-ui.css" rel="stylesheet">
+
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+	<style type="text/css">
+		body {
+
+			margin: 0;
+			padding: 0;
+			font-family: "Lato", Arial, Tahoma, sans-serif;
+			background-color: #FCFCFC;
+
+
+		}
+
+		.topBar {
+
+			background-color: #2C2C2C;
+			width: 100%;
+			height: 70px;
+			position: absolute;
+
+		}
+
+		.topBarMenu {
+
+			position: absolute;
+			left: 215px;
+			top: 15px;
+
+		}
+
+		.topBar ul {
+
+			list-style: none;
+			padding: 0px;
+			margin: 0px;
+			z-index: 1;
+
+		}
+
+		.topBar ul li {
+
+			float: left;
+			width: 160px;
+			height: 40px;
+			background-color: #2C2C2C;
+			opacity: .9;
+			line-height: 40px;
+			text-align: center;
+			font-size: 20px;
+
+		}
+
+		.topBar a {
+
+			color: #FFFFFF;
+			text-decoration: none;
+			display: block;
+
+		}
+
+		.topBar ul li a:hover {
+
+			background-color: black;
+
+		}
+
+		.topBar ul li ul li {
+
+			display: none;
+
+		}
+
+		.topBar ul li:hover ul li {
+
+			display: block;
+
+		}
+
+		.topBar ul li ul li ul {
+
+			float: left !important;
+			display: none;
+
+		}
+
+		.topBar ul li ul li:hover ul {
+
+			display: block;
+			margin-left: 159px;
+			margin-top: -41px;
+
+		}
+
+		#search {
+
+			width: 150px;
+			height: 18px;
+			background-color: black;
+			color: white;
+			position: absolute;
+			left: 1040px;
+			top: 16px;
+			padding: 6px;
+			font-size: 100%;
+			border: none;
+			border-radius: 6px;
+			border-top-right-radius: 0px;
+			border-bottom-right-radius: 0px;
+
+		}
+
+		.topBar img {
+
+			margin-top: 6px;
+
+		}
+
+		#searchImg {
+
+			position: absolute;
+			left: 1206px;
+			top: 14px;
+			width: 30px;
+			height: 30px;
+			border-radius: 6px;
+			border-top-left-radius: 0px;
+			border-bottom-left-radius: 0px;
+
+		}
+
+		#apply {
+
+			border: 2px solid white;
+			margin-left: 15px;
+			width: 120px;
+			height: 40px;
+			margin-top: -4px;
+
+		}
+
+
+		.languagePart {
+
+			float: left;
+			color: white;
+			margin-left: 1260px;
+			margin-top: 21px;
+			font-size: 88%;
+
+		}
+
+		.languagePart span {
+
+			float: left;
+			margin: 5px;
+		}
+
+		.languagePart a {
+
+			color: whte;
+
+		}
+
+		.languagePart a:hover {
+
+			color: gray;
+
+		}
+
+
+		/* Header of Page*/
+
+		#headerIeltsPage {
+
+			width: 100%;
+			height: 150px;
+			background-color: rgb(230, 230, 230);
+		}
+
+		#headerIeltsPage p {
+
+			color: #888888;
+			position: absolute;
+			font-size: 200%;
+			margin-top: 90px;
+			margin-left: 130px;
+			text-decoration: underline;
+		}
+
+		/*Main part of information*/
+
+		.ieltsImg {
+			width: 450px;
+			height: 250px;
+			margin-left: 90px;
+			margin-top: 35px;
+
+		}
+
+		.ieltsInf h1 {
+
+			color: #626262;
+			margin-left: 600px;
+			margin-top: -267px;
+		}
+
+		.ieltsInf p {
+
+			color: #626262;
+			margin-left: 600px;
+			margin-top: 20px;
+			line-height: 27px;
+			margin-right: 50px;
+
+		}
+
+
+		/* Tab menu*/
+
+		.ui-tabs-vertical {
+
+			width: 49em;
+			margin-left: 510px;
+			margin-top: 70px;
+			margin-bottom: 70px
+		}
+
+		.ui-tabs-vertical .ui-tabs-nav {
+
+			padding: .2em .1em .2em .2em;
+			float: left;
+			width: 22em;
+			border-right: none;
+			margin-top: 3px;
+			margin-left: -362px;
+			margin-top: -5px;
+
+
+		}
+
+		.ui-tabs-vertical .ui-tabs-nav li {
+
+			clear: left;
+			width: 100%;
+			border-bottom-width: 0 !important;
+			border-right-width: 0 !important;
+			border-top-width: 0 !important;
+			border-left-width: 0 !important;
+			margin: 0;
+
+
+
+		}
+
+		.ui-tabs-vertical .ui-tabs-nav li a {
+
+			display: block;
+			color: #757575;
+			width: 20em;
+
+
+		}
+
+
+
+		.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active {
+
+			padding-bottom: 0;
+			padding-right: .1em;
+			border-right-width: 1px;
+			background-color: white;
+
+
+
+		}
+
+		.ui-tabs-vertical .ui-tabs-panel {
+
+			padding: 1em;
+			float: right;
+			width: 40em;
+
+
+
+		}
+
+		.tab-1Head {
+
+			font-size: 100%;
+			color: #626262;
+			margin-left: -90px;
+			margin-top: -8px;
+
+		}
+
+		.tab-1Body {
+
+			line-height: 28px;
+			margin-left: -80px;
+			margin-top: -5px;
+
+
+		}
+
+
+
+		.tab-2Body {
+
+			line-height: 28px;
+			margin-left: -80px;
+			margin-top: -3px;
+
+		}
+
+		.tab-2Head {
+
+			font-weight: bold;
+			margin-left: -90px;
+			color: #626262;
+			margin-top: -5px;
+		}
+
+		.tab-3Body {
+
+			line-height: 28px;
+			margin-left: -80px;
+			margin-top: -3px;
+
+		}
+
+		.tab-4Body {
+
+			line-height: 28px;
+			margin-left: -80px;
+			margin-top: -3px;
+
+		}
+
+		.tab-4Head {
+
+			font-weight: bold;
+			margin-left: -90px;
+			color: #626262;
+			margin-top: -5px;
+		}
+
+
+		#italyFlyer {
+
+			width: 100%;
+			margin-left: -20px;
+		}
+
+
+
+
+		/* Validation Form*/
+
+		input {
+
+			height: 32px;
+			padding: 5px 5px 10px 17px;
+			font-size: 20px;
+			border-radius: 5px;
+			border: 1px solid gray;
+			width: 380px;
+			margin-top: 4px;
+
+
+		}
+
+		label {
+			position: relative;
+			top: 15px;
+			width: 300px;
+			float: left;
+
+
+		}
+
+		#emaildiv {
+
+			width: 750px;
+			margin: 0 auto;
+			background-color: #EDEFF2;
+			padding: 10px 20px 20px 20px;
+			margin-top: -20px;
+			margin-left: -131px;
+
+		}
+
+		.form-element {
+
+			margin-bottom: 10px;
+		}
+
+		.LevelOfStudy {
+
+			width: 290px;
+			height: 50px;
+			font-size: 17px;
+			margin-top: 7px;
+			margin-bottom: 7px;
+
+
+		}
+
+
+		#submitButton {
+
+			width: 130px;
+			margin-left: -10px;
+			background-color: #D3D3D3;
+			padding: 1px 2px 4px 2px;
+		}
+
+		#submitButton:hover {
+
+			color: white;
+			background-color: black;
+		}
+
+
+		#errorMessage {
+
+			color: red;
+			font-size: 100% !important;
+
+
+		}
+
+
+
+		#succussMessage {
+
+			color: green;
+			font-size: 110% !important;
+			display: none;
+			font-weight: bold;
+			margin-top: 20px;
+
+		}
+
+		#textArea {
+
+
+			width: 673px;
+			height: 200px;
+			border: none;
+			font-size: 15px;
+			line-height: 20px;
+
+		}
+
+
+		/* Footer */
+
+		/* Footer */
+
+		.footer {
+
+			background-color: #545454;
+			width: 100%;
+			height: 500px;
+
+
+		}
+
+		#footerFirstPartHead {
+
+			color: #DDDDDD;
+			position: absolute;
+			font-size: 120%;
+			margin-left: 120px;
+			margin-top: 40px;
+		}
+
+		#footerFirstPartInf1 {
+
+			color: #CCCCCC;
+			position: absolute;
+			font-size: 90%;
+			margin-left: 120px;
+			margin-top: 80px;
+			width: 400px;
+			line-height: 24px;
+			margin-bottom: 15px;
+		}
+
+		#footerFirstPartInf2 {
+
+			color: #CCCCCC;
+			position: absolute;
+			font-size: 90%;
+			margin-left: 120px;
+			margin-top: 220px;
+			width: 400px;
+			line-height: 24px;
+			margin-bottom: 15px;
+		}
+
+		/*footer /second line*/
+
+		#footerSecondPartHead {
+
+			color: #DDDDDD;
+			position: absolute;
+			font-size: 120%;
+			margin-left: 560px;
+			margin-top: 40px;
+
+		}
+
+		#tick1 {
+
+			position: absolute;
+			font-size: 20px;
+			margin-left: 580px;
+			margin-top: 80px;
+		}
+
+		#footerSecondInf1 {
+
+			color: #CCCCCC;
+			position: absolute;
+			font-size: 90%;
+			margin-left: 610px;
+			margin-top: 78px;
+			width: 400px;
+			line-height: 24px;
+
+		}
+
+		#footerSmallLine1 {
+
+			border-top: 1px solid gray;
+			position: absolute;
+			margin-top: 110px;
+			margin-left: 560px;
+			width: 80px;
+		}
+
+		/*second line of seconf part of footer*/
+
+		#tick2 {
+
+			position: absolute;
+			font-size: 20px;
+			margin-left: 580px;
+			margin-top: 130px;
+		}
+
+		#footerSecondInf2 {
+
+			color: #CCCCCC;
+			position: absolute;
+			font-size: 90%;
+			margin-left: 610px;
+			margin-top: 128px;
+			width: 400px;
+			line-height: 24px;
+
+		}
+
+		#footerSmallLine2 {
+
+			border-top: 1px solid gray;
+			position: absolute;
+			margin-top: 160px;
+			margin-left: 560px;
+			width: 80px;
+		}
+
+		/*third line of seconf part of footer*/
+
+		#tick3 {
+
+			position: absolute;
+			font-size: 20px;
+			margin-left: 580px;
+			margin-top: 180px;
+		}
+
+		#footerSecondInf3 {
+
+			color: #CCCCCC;
+			position: absolute;
+			font-size: 90%;
+			margin-left: 610px;
+			margin-top: 178px;
+			width: 400px;
+			line-height: 24px;
+
+		}
+
+		#footerSmallLine3 {
+
+			border-top: 1px solid gray;
+			position: absolute;
+			margin-top: 210px;
+			margin-left: 560px;
+			width: 80px;
+		}
+
+		/*fourth line of seconf part of footer*/
+
+		#tick4 {
+
+			position: absolute;
+			font-size: 20px;
+			margin-left: 580px;
+			margin-top: 230px;
+		}
+
+		#footerSecondInf4 {
+
+			color: #CCCCCC;
+			position: absolute;
+			font-size: 90%;
+			margin-left: 610px;
+			margin-top: 228px;
+			width: 400px;
+			line-height: 24px;
+
+		}
+
+		#footerSmallLine4 {
+
+			border-top: 1px solid gray;
+			position: absolute;
+			margin-top: 285px;
+			margin-left: 560px;
+			width: 80px;
+		}
+
+		/*fourth line of seconf part of footer*/
+
+		#tick5 {
+
+			position: absolute;
+			font-size: 20px;
+			margin-left: 580px;
+			margin-top: 302px;
+		}
+
+		#footerSecondInf5 {
+
+			color: #CCCCCC;
+			position: absolute;
+			font-size: 90%;
+			margin-left: 610px;
+			margin-top: 300px;
+			width: 400px;
+			line-height: 24px;
+
+		}
+
+
+		/*third part of footer / contact part of footer */
+
+		#footerThirdPartHead {
+
+			color: #DDDDDD;
+			position: absolute;
+			font-size: 120%;
+			margin-left: 1020px;
+			margin-top: 40px;
+		}
+
+		#footerThirdPartPhone {
+
+			color: #CCCCCC;
+			position: absolute;
+			font-size: 90%;
+			margin-left: 1020px;
+			margin-top: 80px;
+			width: 400px;
+
+		}
+
+		#footerThirdPartEmail {
+
+			color: #CCCCCC;
+			position: absolute;
+			font-size: 90%;
+			margin-left: 1020px;
+			margin-top: 110px;
+			width: 400px;
+
+		}
+
+		.footer hr {
+
+			position: absolute;
+			margin-top: 430px;
+			width: 100%;
+
+		}
+
+		#copyright {
+
+			position: absolute;
+			color: #CCCCCC;
+			margin-top: 460px;
+			margin-left: 39%;
+		}
+
+		/*social media*/
+
+
+		#socialMedia ul {
+
+			display: flex;
+			position: absolute;
+			transform: translate(-50%, -50%);
+			margin-left: 1135px;
+			margin-top: 325px;
+
+		}
+
+		#socialMedia ul li {
+
+			list-style: none;
+		}
+
+		#socialMedia ul li a {
+
+			width: 60px;
+			height: 60px;
+			background-color: #fff;
+			text-align: center;
+			line-height: 60px;
+			font-size: 40px;
+			margin-left: 13px;
+			display: block;
+			border-radius: 50%;
+			position: relative;
+			overflow: hidden;
+			border: 3px solid #fff;
+
+
+		}
+
+		#socialMedia ul li a .fa {
+
+			position: relative;
+			color: #262626;
+			transition: .7s;
+		}
+
+		#socialMedia ul li a:hover .fa {
+
+			transform: rotateY(360deg);
+			color: white;
+		}
+
+
+		#socialMedia ul li a:before {
+
+			content: '';
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: #f00;
+			transition: .5s;
+
+		}
+
+		#socialMedia ul li a:hover:before {
+
+			top: 0;
+
+
+		}
+
+		#socialMedia ul li:nth-child(1) a:before {
+
+			background-color: #3b5999;
+		}
+
+		#socialMedia ul li:nth-child(2) a:before {
+
+			background-color: #e4405f;
+		}
+
+		#socialMedia ul li:nth-child(3) a:before {
+
+			background-color: #00AFF0;
+		}
+
+		#socialMedia ul li:nth-child(4) a:before {
+
+			background-color: #25D366;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<div class="topBar">
+
+		<ul class="topBarMenu">
+
+			<li> <a href="StudyAbroad.html"> Home </a></li>
+
+			<li> <a> Study Abroad </a>
+
+				<ul>
+					<li> <a href="Canada.html"> Canada </a></li>
+					<li> <a href="Usa.html"> USA </a></li>
+					<li> <a> Europe </a>
+						<ul>
+
+							<li><a href="Hungary.html">Hungary </a></li>
+							<li><a href="Italy.html">Italy </a></li>
+							<li><a href="Germany.html">Germany </a></li>
+							<li><a href="France.html">France </a></li>
+
+						</ul>
+					</li>
+					<li> <a href="Malaysia.html"> Malaysia </a></li>
+				</ul>
+			</li>
+
+			<li> <a href="Ielts.html">IELTS/PTE </a></li>
+
+			<!-- <li> <a href="" id ="event">Events </a></li> -->
+
+			<li> <a href="ContactUs.html">Contact Us </a></li>
+
+			<LI id="apply"> <a href="Apply.html">Apply Now </a></LI>
+
+		</ul>
+
+
+		<input id="search" type="text" placeholder="Search...">
+
+		<a href=""><img id="searchImg" src="pictures/search5.PNG"></a>
+
+		<div class="languagePart">
+			<span><a href="">English</a></span>
+
+			<span>|</span>
+
+			<span><a href="">Japanese</a></span>
+		</div>
+
+
+	</div>
+
+
+	<!-- Header of page  -->
+
+	<div id="headerIeltsPage">
+
+		<p>IELTS/PTE</p>
+
+	</div>
+
+	<!-- Main Part of Iataly -->
+
+	<div class="ieltsInf">
+
+		<img class="ieltsImg" src="pictures/ielts-pte.jpg">
+
+		<h1>Need a High IELTS/PTE Score but don't know how to Get it?</h1>
+
+		<p>
+			We will give you the strategies and skills you need to increase your Test Score! our IELTS/PTE Coaching Experts Department is created to help students who want to achieve their educational goals in international scale and study abroad. We try our
+			best to assist and guide students to direct them in a right way with the right resources. We give you the required techniques and practice to master each skill through our professionally designed workshops so that you have a better understanding
+			of what the examination is about and what is expected of you. IELTS-PTE Coaching Experts will help you to simulate the actual test under the test conditions. After each test we will analyze the answers with our professional teachers and you can
+			evaluate your ability for the actual exam.
+
+
+		</p>
+
+	</div>
+
+
+	<!-- Tab Menue  -->
+
+
+	<div id="tabs">
+
+		<ul>
+
+			<li><a href="#tabs-1">IELTS</a></li>
+
+			<li><a href="#tabs-2">PTE</a></li>
+
+			<li><a href="#tabs-3">IELTS/PTE Preparation </a></li>
+
+			<li><a href="#tabs-4">Request For Free Consolation </a></li>
+
+		</ul>
+
+		<div id="tabs-1">
+
+
+			<p class="tab-1Body">
+
+				Let’s reach for success in IELTS, we run a series of IELTS workshops to help you to reach your goals and gives you a comprehensive guide to the Requirements of each skill. You will be able to formulate effective strategies for the test. Our
+				strategy is unique and it will equip students with an analytical approach.
+
+				<br><br>
+				<b>Book your placement test Today!</b>
+				<br><br>
+				<b>IELTS Test Structure</b>
+				<br><br>
+				<b>Speaking Test:</b>
+				<br><br>
+				(11-14Min), The Test consists of an interview with a trained examiner, and is recorded on a tape recorder. However, this recording is made to assess the examiner and not the candidate.
+				<br><br>
+				<b>Listening Test:</b>
+				<br><br>
+				(30+10Min), The test consists of 4 sections, and you will hear the tape only once. There are 40 questions in total. The listening passages become more difficult as you progress through the test.
+				<br><br>
+				<b>Reading Test:</b>
+				<br><br>
+				(60Min), The Reading Test takes 60 minutes and is in 3 sections. There are 3 passages and a total of 40 questions.
+				<br><br>
+				<b>Writing Test:</b>
+				<br><br>
+				(60Min), There are two writing tasks. The first task will take approximately 20 minutes, and you are required to write a minimum of 150 words. The second task will take approximately 40 minutes with a minimum of 250 words.
+
+			</p>
+
+		</div>
+
+		<div id="tabs-2">
+
+
+
+			<p class="tab-2Body">
+
+				To complete a PTE Academic test, you will need to attend a secure Pearson test center. You will use a computer and headset to listen to, read and respond to questions. <br><br>
+
+				During the three-hour test session there will be three main parts to the test: speaking and writing (together), listening and reading. There are twenty different question formats, ranging from multiple choice through to essay writing and
+				interpreting information. <br><br>
+
+				PTE Academic assesses real-life, academic English, so you will hear excerpts from lectures and view graphs and charts. You will hear a range of accents in the test, from British and American to non-native speakers, so you will be exposed to the
+				type of accents you will encounter in everyday life. <br><br>
+
+				<b>Test Format:</b> <br><br>
+
+				<b>Part 1: Speaking & Writing (77 – 93 minutes):</b> -Personal introduction -Read aloud -Repeat sentence -Describe image -Re-tell lecture -Answer short question -Summarize written text -Essay (20 mins). <br><br>
+
+				In Part 1 you will be tested on your speaking and writing skills. The time given to this section is 77-93 minutes.To assess speaking, your skills will be tested by your ability to produce spoken English in an academic environment. The writing
+				section will require you to write responses in academic English using correct grammar and spelling. <br> <br>
+
+				<b>Part 2: Reading (32 – 41 minutes):</b> -Fill in the blanks -Multiple choice questions -Re-order paragraphs -Fill in the blanks -Multiple choice questions. <br><br>
+
+				In part 2 you will be tested on your reading skills. This single timed section contains 15-20 independent and integrated skills items, depending on the combination of items in a given test. Different response formats, including multiple-choice,
+				re-order paragraphs, and fill in the blanks, are designed to test your ability to read, write and listen to information provided in English. Because PTE Academic is an integrated skill test, one item type in this part of the test also assesses
+				writing skills. <br><br>
+
+				<b>Part 3: Listening (45 – 57 minutes):</b> -Summarize spoken text -Multiple choice questions -Fill in the blanks -Highlight the correct summary -Multiple choice questions -Select missing word -Highlight incorrect words -Write from dictation <br><br>
+
+				Part 3 consists of questions that are based on audio or video clips which begin to play automatically. You hear each audio or video clip only once so listen carefully. You are allowed to take notes.For each question you have the opportunity to
+				adjust the volume. While the audio clip is playing, move the control bar to the right to increase the volume or to the left to decrease the volume.
+
+
+			</p>
+
+		</div>
+
+		<div id="tabs-3">
+
+			<p class="tab-3Body">
+
+				Our Analytical approach to IELTS-PTE exams in order to apply the right techniques for each skill will be explained and general instructions will be given. Features are: Analyzing the IELTS Structure, Time Management for IELTS, General
+				Preparatory Techniques. <br><br>
+
+				Testing your IELTS Skills especially designed for test Takers and helps students to find out what skills they need to improve and practice.<br><br>
+
+				Power up your LISTENING, SPEAKING, READING and WRITING Skills, You will be able to formulate effective strategies for the test. Our strategy is unique and it will equip students with an analytical approach. Let’s reach for success in IELTS-PTE
+				through a series of techniques to help you to reach your goals and gives you a comprehensive guide to the Requirements of each skill.<br><br>
+
+				Increase your Score! you will be able to practice all the techniques you learned and apply them in previous exams has done recently. In this way you have the ability to recognize the question types and will find out the right way to approach
+				each question.<br><br>
+
+				Analyze the answers in your Mock test day with our professional Trainers Reasons you should take Mock Tests: So that you will not get a panic attack! , To increase your confidence..., For Firmly learning... , So that you know IELTS Exam better!,
+				To achieve the higher scorer!
+
+			</p>
+		</div>
+
+
+
+
+
+		<div id="tabs-4">
+
+			<form action="https://formspree.io/shayan_momeni@yahoo.com" method="POST">
+
+				<div id="emaildiv">
+
+					<h2>IELTS/ PTE Consultation Request</h2>
+
+					<p class="headerValidation">All fields are required</p>
+
+					<div class="form-element">
+
+						<label for="FirstName">First Name</label>
+						<input type="name" name="FirstName" id="FirstName" placeholder="eg.Shayan">
+
+					</div>
+
+					<div class="form-element">
+
+						<label for="LastName">Last Name</label>
+						<input type="name" name="LastName" id="LastName" placeholder="eg.Momeni">
+
+					</div>
+
+
+					<div class="form-element">
+
+						<label for="LevelOfStudy">which exam you are interested in?</label>
+
+						<select class="LevelOfStudy">
+
+							<option value="">-- select one --</option>
+							<option value="High School">IELTS</option>
+							<option value="Diploma Degree">PTE</option>
+							<option value="Bachelor's Degree">I am not sure!</option>
+
+						</select>
+
+					</div>
+
+					<div class="form-element">
+
+						<label for="Planning">For what purpose you are taking the Exam?</label>
+
+						<select class="LevelOfStudy">
+
+							<option value="">-- select one --</option>
+							<option value="Canada">Study Abroad</option>
+							<option value="USA">Immigration</option>
+							<option value="Italy">Other</option>
+
+						</select>
+
+					</div>
+
+
+					<div class="form-element">
+
+						<label for="Telephone">Telephone</label>
+						<input type="text" name="Telephone" id="Telephone" placeholder="eg.0123456789">
+
+					</div>
+
+					<div class="form-element">
+
+						<label for="email">Email</label>
+						<input type="text" name="email" id="email" placeholder="eg.Shayan_momeni@yahoo.com">
+
+					</div>
+
+					<div>
+						<br>
+						<p>Tell us More :</p>
+
+						<textarea id="textArea" name="M
+					essage"></textarea>
+
+						<br>
+						<br>
+
+					</div>
+
+					<div class="form-element">
+
+						<input type="submit" id="submitButton" value="Sign up">
+
+
+					</div>
+
+
+
+					<div>
+						<div id="errorMessage"> </div>
+						<div id="succussMessage">It is done successfully !</div>
+
+					</div>
+
+				</div>
+		</div>
+		</form>
+
+
+
+
+
+
+		<script type="text/javascript">
+			function isEmail(email) {
+
+				var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+				return regex.test(email);
+
+			}
+
+			$("#submitButton").click(function() {
+
+				var errorMessage = "";
+
+				var fieldsMissing = "";
+
+
+				if ($("#FirstName").val() == "") {
+
+					fieldsMissing += "<p >First Name !";
+				}
+
+				if ($("#LastName").val() == "") {
+
+					fieldsMissing += "<p>Last Name !";
+				}
+
+				if ($("#DateBirth").val() == "") {
+
+					fieldsMissing += "<p>Date of Birth !";
+				}
+
+				if ($("#Nationality").val() == "") {
+
+					fieldsMissing += "<p>Nationality !";
+				}
+
+
+
+				if ($("#email").val() == "") {
+
+					fieldsMissing += "<p>Email !";
+				}
+
+				if ($("#Telephone").val() == "") {
+
+					fieldsMissing += "<p>Telephone !";
+				}
+
+
+
+
+				if (fieldsMissing != "") {
+
+					errorMessage += "<p> The following field(s) are missing : " + fieldsMissing;
+				}
+
+
+
+
+				if (isEmail($("#email").val()) == false) {
+
+					errorMessage += "<p> Your Email Address is not valid ! </p>";
+
+				}
+
+				if ($.isNumeric($("#Telephone").val()) == false) {
+
+					errorMessage += "<p> Your Telephone Number is not correct ! </p> ";
+
+				}
+
+
+
+				if (errorMessage != "") {
+
+					$("#errorMessage").html(errorMessage);
+
+				} else {
+
+					$("#succussMessage").show();
+					$("#errorMessage").hide();
+				}
+			});
+		</script>
+
+
+		<script type="text/javascript">
+			$(function() {
+
+				$("#tabs").tabs().addClass("ui-tabs-vertical ui-helper-clearfix");
+				$("#tabs li").removeClass("ui-corner-top").addClass("ui-corner-left");
+			});
+		</script>
+
+	</div>
+
+	<script type="text/javascript">
+		$("#event").click(function() {
+
+			alert("There is not any Event available right now !");
+
+		});
+	</script>
+
+
+
+
+	<!-- alert for search part -->
+
+	</script>
+
+
+	<script type="text/javascript">
+		$("#search").click(function() {
+
+			alert("Sorry,this engine will be active soon !");
+
+		});
+
+		$("#searchImg").click(function() {
+
+			alert("Sorry,this engine will be active soon !");
+
+		});
+	</script>
+
+
+
+
+
+
+
+	<!-- Footer -->
+	<!-- Footer -->
+
+	<div class="footer">
+
+		<!-- First part of footer -->
+
+		<p id="footerFirstPartHead">How We Arise?</p>
+
+		<p id="footerFirstPartInf1">We started back in October 2010 with the goal to help other students to enroll in Malaysian universities. In early 2014 we started offering students the Universities in USA and Europe especially Germany and We could
+			successfully place many international students from various nationalities.</p>
+
+		<p id="footerFirstPartInf2">Currently study vesta ( Registered as Vesta Consulting Sdn. Bhd.) features various private schools, colleges and universities, public universities, polytechnics and professional bodies in Malaysia, USA, Canada , UK,
+			Australia and Europe.​ We are diverse, welcoming, accepting and passionate about being the best we can be. Join us to make your Academic experience unforgettable.</p>
+
+		<!--  Second Part of footer  -->
+
+		<p id="footerSecondPartHead">Our Sevices</p>
+
+		<p id="tick1">&#10004;</p>
+
+		<p id="footerSecondInf1">Free Visa consultation and Documentation assistance</p>
+
+		<p id="footerSmallLine1"></p>
+
+		<!-- Second Part of footer / second line -->
+
+		<p id="tick2">&#10004;</p>
+
+		<p id="footerSecondInf2">Free Scholarship information and application services</p>
+
+		<p id="footerSmallLine2"></p>
+
+		<!-- Second Part of footer / third line -->
+
+		<p id="tick3">&#10004;</p>
+
+		<p id="footerSecondInf3">Free Embassy Interview Preparation</p>
+
+		<p id="footerSmallLine3"></p>
+
+		<!-- Second Part OF footer / fourth line  -->
+
+		<p id="tick4">&#10004;</p>
+
+		<p id="footerSecondInf4">Free Professional advice including visa regulations, accommodation arrangements, travel plans</p>
+
+		<p id="footerSmallLine4"></p>
+
+		<!-- Second Part OF footer / fifth line  -->
+
+		<p id="tick5">&#10004;</p>
+
+		<p id="footerSecondInf5">Free IELTS/ TOEFL/ PTE Preparation Consultation with professional Trainers</p>
+
+
+
+
+		<!-- Third Part of footer / contact Part -->
+
+		<p id="footerThirdPartHead">Contact us</p>
+
+		<p id="footerThirdPartPhone">Phone : +601160990725</p>
+
+		<p id="footerThirdPartEmail">Email : Shayan_momeni@yahoo.com</p>
+
+
+
+		<!-- Last Part Main Page  -->
+
+		<hr>
+
+		<p id="copyright">&#169; Shayan Momeni &#124; All Rights Reserved</p>
+
+
+		<!-- social Media part -->
+
+
+		<div id="socialMedia">
+
+			<ul>
+				<li><a href=""><i class="fa fa-facebook"></i></a></li>
+				<li><a href=""><i class="fa fa-instagram"></i></a></li>
+				<li><a href=""><i class="fa fa-skype"></i></a></li>
+				<li><a href=""><i class="fa fa-whatsapp"></i></a></li>
+
+			</ul>
+		</div>
+
+	</div>
+
+</body>
+
+</html>
